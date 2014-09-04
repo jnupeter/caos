@@ -19,7 +19,33 @@
       <type>pom</type>
       <scope>provided</scope>
     </dependency>
+
+    <dependency>  
+        <groupId>org.primefaces</groupId>  
+        <artifactId>primefaces</artifactId>  
+        <version>5.0</version>  
+    </dependency>
+        
+    <dependency>
+        <groupId>org.primefaces.themes</groupId>
+        <artifactId>all-themes</artifactId>
+        <version>1.0.10</version>            
+    </dependency>
+        
   </dependencies>
+  <build>
+      <finalName>${project.artifactId}</finalName>
+      <plugins>
+         <plugin>
+            <groupId>org.jboss.as.plugins</groupId>
+            <artifactId>jboss-as-maven-plugin</artifactId>
+            <version>7.4.Final</version>
+            <configuration>
+                <filename>${project.artifactId}.war</filename>
+            </configuration>
+         </plugin>
+      </plugins>
+  </build>
   <profiles>
     <profile>
      <!-- When built in OpenShift the 'openshift' profile will be used when invoking mvn. -->
