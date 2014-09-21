@@ -2,3 +2,787 @@
 * Layout CSS file for CAOS project.
 * Any CSS classes not beginning with ".ui-" should go here.
 */
+/**
+ * @file
+ * Positioning for a fixed-width, desktop-centric layout.
+ *
+ * Define CSS classes to create a table-free, 3-column, 2-column, or single
+ * column layout depending on whether blocks are enabled in the left or right
+ * columns.
+ *
+ * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+ */
+#header #banner .col-4 .ui-corner-tl .arrow-down {
+  background: url('../images/sprite.png') no-repeat -22px 0;
+  width: 29px;
+  height: 12px;
+}
+
+#wrap {
+  position: relative;
+  left: 0px;
+}
+
+/*
+ * Center the page.
+ */
+.container {
+  /* If you want to make the page a fixed width and centered in the viewport,
+   * this is the standards-compliant way to do that. */
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+}
+.container:before, .container:after {
+  content: "";
+  display: table;
+}
+.container:after {
+  clear: both;
+}
+
+#left-sidebar,
+.col-1 {
+  float: left;
+  width: 225px;
+  margin-left: 0px;
+  margin-right: -240px;
+}
+
+.col-1-3 {
+  float: left;
+  width: 705px;
+  margin-left: 0px;
+  margin-right: -720px;
+}
+
+.col-2 {
+  float: left;
+  width: 225px;
+  margin-left: 240px;
+  margin-right: -480px;
+}
+
+#content,
+.col-2-3 {
+  float: left;
+  width: 465px;
+  margin-left: 240px;
+  margin-right: -720px;
+}
+
+.col-3 {
+  float: left;
+  width: 225px;
+  margin-left: 480px;
+  margin-right: -720px;
+}
+
+#top-right,
+#right-sidebar,
+.col-4 {
+  float: left;
+  width: 225px;
+  margin-left: 720px;
+  margin-right: -960px;
+}
+
+.full-width {
+  clear: left;
+  float: left;
+  width: 945px;
+  margin-left: 0px;
+  margin-right: -960px;
+}
+
+#header {
+  background: #FFFFFF;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+#header > .container::after {
+  content: ' ';
+  background: #FFFFFF url("../images/header-bg.jpg") repeat-x right top;
+  position: absolute;
+  width: 100%;
+  height: 130px;
+  margin-left: 945px;
+}
+#header #toggle-menu {
+  float: left;
+  display: none;
+  font-size: 22px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+#header #toggle-menu a {
+  color: #333333;
+}
+#header #toggle-menu span {
+  margin-right: 5px;
+}
+#header #logo {
+  float: left;
+  margin: 17px 0 0 20px;
+}
+#header #logo a img {
+  border: 0;
+}
+#header #menu {
+  margin: 55px 0 0 75px;
+}
+#header #menu li {
+  list-style: none;
+  float: left;
+}
+#header #menu li a {
+  font-size: 18px;
+  font-weight: light;
+  line-height: 27px;
+  padding-left: 23px;
+  padding-right: 23px;
+  border-right: 1px solid #BBBBBB;
+  display: block;
+  color: #333333;
+}
+#header #menu li a:hover {
+  color: #E5001D;
+  text-decoration: none;
+}
+#header #menu li.last a {
+  border: 0;
+}
+#header #menu li.current a {
+  color: #E5001D;
+}
+#header #menu li.current::after {
+  content: " ";
+  display: block;
+  margin: 47px auto 0 auto;
+  background: url('../images/sprite.png') no-repeat -68px 0;
+  width: 22px;
+  height: 11px;
+}
+#header #menu.five a {
+  padding-left: 17px;
+  padding-right: 17px;
+  text-align: center;
+}
+#header #menu.five li.last {
+  max-width: 90px;
+  margin-top: -10px;
+}
+#header #menu.five li.last a {
+  padding-right: 0;
+  line-height: 20px;
+}
+#header #top-right {
+  float: left;
+}
+#header #top-right #top-links {
+  height: 26px;
+  line-height: 26px;
+  font-size: 12px;
+  background-color: #E3E3E3;
+  padding-left: 20px;
+}
+#header #top-right #top-links a {
+  color: #555555;
+  margin-right: 10px;
+  font-weight: bold;
+}
+#header #top-right #user-functions {
+  padding: 10px 0 0px 20px;
+  height: 94px;
+  background-color: #EDEDED;
+  color: #555555;
+}
+#header #top-right #user-functions p {
+  margin: 5px 0;
+}
+#header #top-right #user-functions #welcome-message {
+  font-size: 16px;
+}
+#header #top-right #user-functions .ui-button {
+  width: auto;
+}
+#header #top-right #user-functions .ui-state-hover {
+  box-shadow: none;
+  background: #E3E3E3;
+}
+#header #banner {
+  background: url("../images/banner.jpg") no-repeat center top;
+  background-size: 100%;
+  min-width: 960px;
+  color: #FFFFFF;
+  margin-top: 130px;
+}
+#header #banner .dots {
+  background: transparent url('../images/dot.png') repeat;
+  min-height: 150px;
+}
+#header #banner .col-1-3 h1 {
+  margin-top: 65px;
+}
+#header #banner .col-1-3 p {
+  font-size: 20px;
+  line-height: 26px;
+  margin: 15px 0 0 0;
+}
+#header #banner .col-1-3 .btn-red {
+  margin-top: 20px;
+  position: absolute;
+  width: 221px;
+}
+#header #banner .col-4 .ui-corner-tl {
+  padding: 20px 15px 13px 15px;
+  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  height: 250px;
+  padding-bottom: 20px;
+}
+#header #banner .col-4 .ui-corner-tl.fixed-height {
+  min-height: 270px;
+}
+#header #banner .col-4 .ui-corner-tl.fixed-height .ui-button {
+  position: absolute;
+  margin: 0;
+  bottom: 13px;
+}
+#header #banner .col-4 .ui-corner-tl h2 {
+  color: #FFFFFF;
+}
+#header #banner .col-4 .ui-corner-tl .key-dates {
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+#header #banner .col-4 .ui-corner-tl .arrow-down {
+  display: block;
+  margin: 0 auto;
+}
+#header #banner .col-1,
+#header #banner .col-2-3 {
+  margin-top: 25px;
+}
+#header #banner .full-width h1 {
+  margin-top: 40px;
+  font-size: 35px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  #header {
+    padding-top: 20px;
+  }
+  #header #top-right {
+    float: left;
+    width: 705px;
+    margin-left: 0px;
+    margin-right: -720px;
+    margin-top: -20px;
+  }
+  #header #top-right #top-links {
+    background: none;
+    float: left;
+  }
+  #header #top-right #top-links a {
+    font-weight: normal;
+  }
+  #header #top-right #user-functions {
+    background: none;
+    float: right;
+    text-align: right;
+    line-height: 26px;
+    padding: 0;
+    width: auto;
+  }
+  #header #top-right #user-functions #welcome-message {
+    padding-right: 5px;
+  }
+  #header #top-right #user-functions #welcome-message .icon-user {
+    display: none;
+  }
+  #header #top-right #user-functions #welcome-message::after {
+    content: ",";
+  }
+  #header #top-right #user-functions strong {
+    font-weight: normal;
+  }
+  #header #top-right #user-functions a.ui-button {
+    background: none;
+    padding: 0;
+  }
+  #header #top-right #user-functions a.ui-button .ui-button-text {
+    padding: 0;
+    display: inline;
+  }
+  #header #top-right #user-functions #welcome-message,
+  #header #top-right #user-functions p,
+  #header #top-right #user-functions a.ui-button {
+    font-size: 12px;
+    display: inline;
+  }
+}
+@media only screen and (max-width: 767px), only screen and (min-device-width: 650px) and (max-device-width: 767px) {
+  #header #toggle-menu {
+    display: block;
+  }
+  #header #menu {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: -230px;
+    background-color: #000;
+    width: 230px;
+    height: 100%;
+  }
+  #header #menu li {
+    float: none;
+  }
+  #header #menu li a {
+    padding: 0;
+    text-align: left;
+    display: inline;
+    border: 0;
+  }
+  #header #menu li.current::after {
+    content: none;
+  }
+  #header #menu.five a {
+    padding: 0;
+  }
+  #header #menu.five li.last {
+    margin: 0;
+  }
+}
+#content-container {
+  background-color: #E1E1E1;
+  padding: 20px 0 0 0;
+}
+#content-container .ui-corner-tl {
+  margin-bottom: 20px;
+}
+#content-container .ui-corner-tl.white h2 {
+  text-shadow: none;
+}
+#content-container .col-1-4 .ui-corner-tl {
+  padding: 10px;
+  min-height: 0;
+}
+
+#footer {
+  bottom: 0;
+  clear: both;
+  overflow: hidden;
+  background-color: none;
+  padding: 10px 0;
+}
+#footer ul {
+  padding: 0;
+  margin: 0;
+}
+#footer ul li {
+  float: left;
+  list-style: none;
+}
+#footer ul li a {
+  font-size: 10px;
+  color: #FFFFFF;
+  margin-right: 10px;
+  display: block;
+  float: left;
+  text-decoration: none;
+}
+
+.icon-user {
+  background: #555 url('../images/sprite.png') no-repeat 5px -67px;
+  width: 17px;
+  height: 17px;
+  float: left;
+  margin-right: 5px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.icon-messages {
+  width: 23px;
+  height: 23px;
+  float: left;
+  margin-right: 5px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  -moz-box-shadow: #666 0 0 4px;
+  -webkit-box-shadow: #666 0 0 4px;
+  box-shadow: #666 0 0 4px;
+  background-color: #DF0019;
+  text-align: center;
+  font-size: 16px;
+  line-height: 23px;
+  color: #FFFFFF;
+}
+
+.icon-hamburger {
+  width: 20px;
+  height: 20px;
+  float: left;
+  background: url('../images/sprite.png') no-repeat 0 -163px;
+}
+
+.icon-on-hold {
+  width: 23px;
+  height: 23px;
+  float: left;
+  margin-right: 5px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  -moz-box-shadow: #666 0 0 4px;
+  -webkit-box-shadow: #666 0 0 4px;
+  box-shadow: #666 0 0 4px;
+  background: #FF8000 url('../images/sprite.png') no-repeat 6px -87px;
+}
+
+.icon-in-progress {
+  width: 23px;
+  height: 23px;
+  float: left;
+  margin-right: 5px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  -moz-box-shadow: #666 0 0 4px;
+  -webkit-box-shadow: #666 0 0 4px;
+  box-shadow: #666 0 0 4px;
+  background: #00A3D9 url('../images/sprite.png') no-repeat 8px -114px;
+}
+
+.icon-withdrawn {
+  width: 23px;
+  height: 23px;
+  float: left;
+  margin-right: 5px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  -moz-box-shadow: #666 0 0 4px;
+  -webkit-box-shadow: #666 0 0 4px;
+  box-shadow: #666 0 0 4px;
+  background: #DF0019 url('../images/sprite.png') 7px -139px;
+}
+
+.icon-offer-received {
+  width: 23px;
+  height: 23px;
+  float: left;
+  margin-right: 5px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  -moz-box-shadow: #666 0 0 4px;
+  -webkit-box-shadow: #666 0 0 4px;
+  box-shadow: #666 0 0 4px;
+  background: #85B200;
+  text-align: center;
+  font-size: 16px;
+  line-height: 23px;
+  color: #FFFFFF;
+}
+
+body {
+  font-size: 12px;
+  line-height: 19.2px;
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  color: #333333;
+  background-color: #333333;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p, li {
+  line-height: 16px;
+  font-size: 13px;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 50px;
+  margin: 0;
+  font-family: 'Helvetica', 'Helvetica Light', Arial, sans-serif;
+  font-weight: lighter;
+  text-shadow: 0 2px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  font-size: 26px;
+  line-height: 29px;
+  color: #FFFFFF;
+  font-weight: normal;
+  margin: 0 0 10px 0;
+  text-shadow: 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.right {
+  float: right;
+  width: 50%;
+}
+
+.left {
+  float: left;
+  width: 50%;
+}
+
+.large-text {
+  font-size: 16px;
+  margin: 15px 0;
+}
+
+.red-text {
+  color: #DF0019;
+}
+
+.orange-text {
+  color: #FF2400;
+}
+
+.dates-list {
+  padding: 0;
+  margin: 0;
+}
+.dates-list li {
+  list-style: none;
+  padding: 5px 0px;
+  font-size: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.dates-list li .date {
+  font-weight: bold;
+  font-size: 14px;
+}
+.dates-list li a {
+  color: #FFFFFF;
+}
+.dates-list.dark-lines li {
+  border-bottom: 1px solid #E3E3E3;
+  padding: 10px 0;
+}
+
+.faq-list {
+  color: #333333;
+  padding: 0;
+  margin: 0;
+}
+.faq-list li {
+  list-style: none;
+  padding: 15px 0px;
+  border-bottom: 1px solid rgba(86, 86, 88, 0.3);
+}
+
+.messages .message-header {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 30px;
+  line-height: 30px;
+  padding: 0 16px;
+  -moz-border-radius: 25px 0 0 0;
+  -webkit-border-radius: 25px;
+  border-radius: 25px 0 0 0;
+}
+.messages .date {
+  float: left;
+  width: 20%;
+}
+.messages .message {
+  float: left;
+  width: 80%;
+}
+.messages a.message-link {
+  color: #333;
+  padding: 5px 16px;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: block;
+  overflow: hidden;
+  line-height: 14px;
+  border-bottom: 1px solid rgba(144, 0, 21, 0.3);
+}
+.messages a.message-link.last {
+  border: 0;
+}
+.messages a.message-link:hover {
+  background-color: white;
+}
+.messages a.view-all-messages {
+  background-color: rgba(255, 31, 0, 0.8);
+  height: 30px;
+  line-height: 30px;
+  text-align: right;
+  padding: 0 16px;
+  color: #FFFFFF;
+  font-size: 14px;
+  display: block;
+}
+
+.application-status .status {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 27px;
+  color: #333;
+}
+.application-status p {
+  font-size: 14px;
+}
+.application-status ol {
+  padding: 0;
+  font-size: 14px;
+  list-style-position: inside;
+}
+.application-status ol li {
+  padding: 4px;
+}
+.application-status.portrait {
+  padding: 0px 20px;
+}
+.application-status.portrait li {
+  border-top: 1px solid #FFFFFF;
+}
+.application-status.landscape h2 {
+  text-shadow: none;
+}
+.application-status.landscape li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.application-status.landscape .status {
+  width: 150px;
+}
+.application-status.landscape .right {
+  width: 45%;
+}
+.application-status.landscape .right p {
+  margin-top: 0;
+}
+
+.countdown-portrait {
+  text-shadow: 0 2px rgba(0, 0, 0, 0.3);
+}
+.countdown-portrait div {
+  background-color: #666;
+  display: block;
+  float: left;
+  width: 52px;
+  padding: 6px 3px;
+  font-size: 15px;
+  text-align: center;
+}
+.countdown-portrait div.days, .countdown-portrait div.hours {
+  margin-right: 5px;
+}
+.countdown-portrait div span {
+  font-size: 40px;
+  display: block;
+  line-height: 40px;
+}
+
+.countdown-landscape span.label {
+  font-size: 26px;
+  color: #333;
+  float: left;
+  line-height: 56px;
+  margin: 0 30px;
+}
+.countdown-landscape span.suffix {
+  font-size: 30px;
+  color: #333;
+  float: left;
+  line-height: 56px;
+  margin-right: 20px;
+}
+.countdown-landscape span.number {
+  color: #DF0019;
+  font-size: 40px;
+  line-height: 40px;
+  -moz-box-shadow: #999 0 0 4px;
+  -webkit-box-shadow: #999 0 0 4px;
+  box-shadow: #999 0 0 4px;
+  background-color: #FFF;
+  display: block;
+  float: left;
+  padding: 8px 3px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .desktop-hide {
+    display: none;
+  }
+
+  #content {
+    float: left;
+    width: 465px;
+    margin-left: 0px;
+    margin-right: -480px;
+  }
+
+  #right-sidebar {
+    float: left;
+    width: 225px;
+    margin-left: 480px;
+    margin-right: -720px;
+  }
+}
+@media only screen and (max-width: 767px), only screen and (min-device-width: 650px) and (max-device-width: 767px) {
+  .col-1,
+  .col-2,
+  .col-3,
+  .col-4,
+  .col-1-3,
+  .col-2-3 {
+    clear: left;
+    float: left;
+    width: 705px;
+    margin-left: 0px;
+    margin-right: -720px;
+  }
+
+  .desktop-hide {
+    display: none;
+  }
+
+  .tablet-hide {
+    display: none;
+  }
+}
+@media only screen and (max-width: 649px), only screen and (max-device-width: 649px) {
+  .desktop-hide {
+    display: none;
+  }
+
+  .tablet-hide {
+    display: none;
+  }
+
+  .mobile-hide {
+    display: none;
+  }
+}

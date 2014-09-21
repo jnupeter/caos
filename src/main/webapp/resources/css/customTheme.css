@@ -3,3 +3,279 @@
  * CSS classes used to overwrite the generated Primefaces theme CSS. (Peak provides)
  * After the font end has finialized, the file will be packaged as Primefaces Theme.(QTAC will do that.)
  */
+.ui-icon-arrow-right-dark {
+  background: url('../images/sprite.png') no-repeat 0 -34px;
+  width: 12px;
+  height: 18px;
+}
+
+.ui-icon-arrow-right-light {
+  background: url('../images/sprite.png') no-repeat 0 0;
+  width: 12px;
+  height: 18px;
+}
+
+.ui-button {
+  border: 2px solid #FFFFFF;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  text-align: left;
+  text-shadow: none;
+  width: 190px;
+  font-size: 16px;
+}
+
+#user-functions .ui-button {
+  border: 0;
+  box-shadow: none;
+  background: #FFFFFF;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 4px;
+}
+
+.ui-button-text-only .ui-button-text {
+  padding: 0.5em 1em;
+}
+
+.btn-grey-dark {
+  color: #FFFFFF;
+  background: #333333;
+}
+
+.btn-grey-light {
+  color: #333333;
+  background: #E1E1E1;
+}
+
+.btn-grey-medium {
+  color: #FFFFFF;
+  background: #666666;
+}
+
+.btn-red {
+  color: #FFFFFF;
+  background: #DF0019 url('../images/sprite.png') no-repeat 200px 10px;
+}
+
+#user-functions .ui-button.ui-state-hover,
+.ui-button.ui-state-hover {
+  -moz-box-shadow: #000 0 0 7px;
+  -webkit-box-shadow: #000 0 0 7px;
+  box-shadow: #000 0 0 7px;
+}
+#user-functions .ui-button.ui-corner-tl,
+.ui-button.ui-corner-tl {
+  background: #838383;
+  width: 220px;
+  border: 0;
+  box-shadow: none;
+  color: #FFFFFF;
+  padding: 10px 0;
+}
+#user-functions .ui-button.ui-corner-tl.ui-state-hover,
+.ui-button.ui-corner-tl.ui-state-hover {
+  background-color: #333333;
+}
+
+.ui-icon-arrow-right-light {
+  position: absolute;
+  right: 10px;
+}
+
+.ui-icon-arrow-right-dark {
+  position: absolute;
+  right: 10px;
+}
+
+.ui-corner-bl {
+  -moz-border-radius: 0 0 0 25px;
+  -webkit-border-radius: 0;
+  border-radius: 0 0 0 25px;
+}
+
+.ui-corner-tl {
+  position: relative;
+  -moz-border-radius: 25px 0 0 0;
+  -webkit-border-radius: 25px;
+  border-radius: 25px 0 0 0;
+}
+.ui-corner-tl.dark-grey {
+  padding: 20px 15px 13px 15px;
+  color: #FFFFFF;
+  background-color: #333333;
+  overflow: hidden;
+}
+.ui-corner-tl.dark-grey.fixed-height {
+  min-height: 250px;
+}
+.ui-corner-tl.dark-grey.fixed-height .ui-button {
+  position: absolute;
+  margin: 0;
+  bottom: 13px;
+}
+.ui-corner-tl.dark-grey h2 {
+  color: #FFFFFF;
+}
+.ui-corner-tl.grey {
+  padding: 20px 15px 13px 15px;
+  color: #FFFFFF;
+  background-color: #666666;
+  overflow: hidden;
+}
+.ui-corner-tl.grey.fixed-height {
+  min-height: 250px;
+}
+.ui-corner-tl.grey.fixed-height .ui-button {
+  position: absolute;
+  margin: 0;
+  bottom: 13px;
+}
+.ui-corner-tl.grey h2 {
+  color: #FFFFFF;
+}
+.ui-corner-tl.light-grey {
+  padding: 20px 15px 13px 15px;
+  color: #DF0019;
+  background-color: #e3e3e3;
+  overflow: hidden;
+}
+.ui-corner-tl.light-grey.fixed-height {
+  min-height: 250px;
+}
+.ui-corner-tl.light-grey.fixed-height .ui-button {
+  position: absolute;
+  margin: 0;
+  bottom: 13px;
+}
+.ui-corner-tl.light-grey h2 {
+  color: #DF0019;
+}
+.ui-corner-tl.medium-grey {
+  padding: 20px 15px 13px 15px;
+  color: #DF0019;
+  background-color: #d1d1d1;
+  overflow: hidden;
+}
+.ui-corner-tl.medium-grey.fixed-height {
+  min-height: 250px;
+}
+.ui-corner-tl.medium-grey.fixed-height .ui-button {
+  position: absolute;
+  margin: 0;
+  bottom: 13px;
+}
+.ui-corner-tl.medium-grey h2 {
+  color: #DF0019;
+}
+.ui-corner-tl.orange {
+  padding: 20px 15px 13px 15px;
+  color: #333;
+  background-color: rgba(255, 128, 0, 0.2);
+  overflow: hidden;
+}
+.ui-corner-tl.orange.fixed-height {
+  min-height: 125px;
+}
+.ui-corner-tl.orange.fixed-height .ui-button {
+  position: absolute;
+  margin: 0;
+  bottom: 13px;
+}
+.ui-corner-tl.orange h2 {
+  color: #333;
+}
+.ui-corner-tl.white {
+  padding: 20px 15px 13px 15px;
+  color: #333333;
+  background-color: white;
+  overflow: hidden;
+}
+.ui-corner-tl.white.fixed-height {
+  min-height: 250px;
+}
+.ui-corner-tl.white.fixed-height .ui-button {
+  position: absolute;
+  margin: 0;
+  bottom: 13px;
+}
+.ui-corner-tl.white h2 {
+  color: #DF0019;
+}
+.ui-corner-tl.red {
+  padding: 20px 15px 13px 15px;
+  color: #FFFFFF;
+  background-color: #df0019;
+  overflow: hidden;
+}
+.ui-corner-tl.red.fixed-height {
+  min-height: 250px;
+}
+.ui-corner-tl.red.fixed-height .ui-button {
+  position: absolute;
+  margin: 0;
+  bottom: 13px;
+}
+.ui-corner-tl.red h2 {
+  color: #FFFFFF;
+}
+
+.ui-panelmenu :first-child .ui-panelmenu-header {
+  display: block;
+  background: #333333;
+  height: 40px;
+  line-height: 30px;
+  -moz-border-radius: 25px 0 0 0;
+  -webkit-border-radius: 25px;
+  border-radius: 25px 0 0 0;
+}
+.ui-panelmenu :first-child .ui-panelmenu-header .ui-icon {
+  top: 22px;
+}
+.ui-panelmenu .ui-panelmenu-header {
+  border-radius: 0;
+  box-shadow: none;
+  background: #333333;
+  text-shadow: none;
+  font-size: 13px;
+  border-bottom: 1px solid #565658;
+}
+.ui-panelmenu .ui-panelmenu-header a {
+  color: #FFFFFF;
+  padding: 8px;
+}
+.ui-panelmenu .ui-panelmenu-header .ui-icon {
+  left: 195px;
+  top: 16px;
+  position: relative;
+}
+.ui-panelmenu .ui-panelmenu-header.ui-state-active {
+  background: #000000;
+}
+.ui-panelmenu .ui-panelmenu-content {
+  background: #000000;
+  border: 0;
+  overflow: hidden;
+}
+.ui-panelmenu .ui-panelmenu-content .ui-menu-list {
+  margin: 0 10px;
+}
+.ui-panelmenu .ui-panelmenu-content .ui-menu-list .ui-menuitem {
+  border-radius: 0;
+  border-top: 1px solid #333333;
+}
+.ui-panelmenu .ui-panelmenu-content .ui-menu-list .ui-menuitem a {
+  font-size: 12px;
+  color: #FFFFFF;
+  padding: 4px 10px;
+}
+.ui-panelmenu .ui-panelmenu-content .ui-menu-list .ui-menuitem a:hover {
+  background: none;
+}
+.ui-panelmenu .ui-panelmenu-content .ui-menu-list .ui-menuitem a:hover span {
+  text-decoration: underline;
+}

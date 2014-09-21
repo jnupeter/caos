@@ -1,0 +1,4 @@
+src/main/webapp/.sass-cache/*
+src/main/webapp/sass-extensions/*
+src/main/webapp/sass/*
+src/main/webapp/config.rb
