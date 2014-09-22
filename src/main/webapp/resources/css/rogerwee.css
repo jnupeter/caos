@@ -1,0 +1,24 @@
+#sticky-bar{
+    width:100%;
+    background-color: #00FFFF;
+    height: 20px;
+    text-align: center;
+}
+#sticky-bar.sticky {
+    position: fixed;
+}
+#example-overlay.sticky {
+    top:0px;
+}
+#example-overlay {
+    display: none;
+    top: 20px;
+    margin: 0px auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 1182px;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    z-index: 1110;
+}
