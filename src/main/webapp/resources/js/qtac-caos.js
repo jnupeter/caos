@@ -9,6 +9,7 @@ $(function() {
         $('#wrap').stop().animate({
             left: $('#wrap').css('left') == "0px" ? "230px" : "0"
         }, 500);
+        $('body').toggleClass('hide-body');
         return false;
     });
     $('#logout, .btn, .ui-button').button().click(function(){alert('button clicked');});
