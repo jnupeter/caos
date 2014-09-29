@@ -1,8 +1,19 @@
 #sticky-bar{
     width:100%;
-    background-color: #00FFFF;
-    height: 20px;
+    background-color: #333333;
+    height: 30px;
     text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-weight: bold;
+    z-index: 1000;
+}
+#sticky-bar a {
+    font-weight: normal;
+    color: #15A2ED;
+    background-color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 #sticky-bar.sticky {
     position: fixed;
