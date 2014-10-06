@@ -3,18 +3,6 @@
  * CSS classes used to overwrite the generated Primefaces theme CSS. (Peak provides)
  * After the font end has finialized, the file will be packaged as Primefaces Theme.(QTAC will do that.)
  */
-.ui-icon-arrow-right-dark {
-  background: url('../images/sprite.png') no-repeat 0 -34px;
-  width: 12px;
-  height: 18px;
-}
-
-.ui-icon-arrow-right-light {
-  background: url('../images/sprite.png') no-repeat 0 0;
-  width: 12px;
-  height: 18px;
-}
-
 .ui-button {
   border: 2px solid #FFFFFF;
   -moz-box-shadow: 0px 0px 5px #333333;
@@ -27,6 +15,14 @@
   text-shadow: none;
   width: 190px;
   font-size: 16px;
+}
+.ui-button .icon-arrow-right-light {
+  position: absolute;
+  right: 10px;
+}
+.ui-button .icon-arrow-right-dark {
+  position: absolute;
+  right: 10px;
 }
 
 #user-functions .ui-button {
@@ -99,16 +95,6 @@
   position: absolute;
   margin: 0;
   bottom: 13px;
-}
-
-.ui-icon-arrow-right-light {
-  position: absolute;
-  right: 10px;
-}
-
-.ui-icon-arrow-right-dark {
-  position: absolute;
-  right: 10px;
 }
 
 .ui-corner-bl {

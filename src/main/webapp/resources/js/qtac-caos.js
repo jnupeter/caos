@@ -13,9 +13,16 @@ $(function() {
         return false;
     });
     $('#logout, .btn, .ui-button').button().click(function(){alert('button clicked');});
-    $('#banner .arrow-down').click(function() {
-        $('#banner .key-dates').animate({
-            scrollTop: $("#banner .key-dates").offset().top
-        }, 2000)
+    $('#key-dates .arrow-down').click(function() {
+        $('#key-dates .dates-container').animate({
+            scrollTop: $('#key-dates div').offset().top
+        }, 2000);
+        return false;
+    });
+    $('#key-dates .arrow-up').click(function() {
+        $('#key-dates .dates-container').animate({
+            scrollTop: 0
+        }, 2000);
+        return false;
     });
 });
