@@ -34,39 +34,175 @@
                 <h1 id="style-guide">Style Guide</h1>
             </div>
 
+            <!-- Layouts -->
+            <h2 class="red-text">Layouts</h2>
+            <p>The <code>#wrap</code> div is used for the responsive menu.</p>
+            <p>The <code>#header</code> div includes the banner. This is mainly due to the positioning of the down-arrow for indicating the current main menu selected.</p>
+            <p>The <code>.container</code> class is used throughout the markup to center the divs, i.e. <code>margin: 0 auto</code>.</p>
+            <p>There are two logos, one for normal and one for tablet to mobile responsive.</p>
+            <p>The rest of the header is pretty static apart from user details.</p>
+            <div class="highlight">
+                <xmp class="prettyprint"><div id="wrap">
+    <div id="header">
+        <div class="container">
+            <div class="header-left">
+                <div id="toggle-menu"><a href="#"><span class="icon-hamburger"></span>Menu</a></div>
+                <div id="logo">
+                    <a href="style-guide.html"><img src="resources/images/logo.png" alt="QTAC" width="61px" height="97px" class="portrait"/><img src="resources/images/logo-mobile.png" alt="QTAC" width="120px" height="25px" class="landscape"/></a>
+                </div>
+                <ul id="menu">
+                    ...
+                </ul>
+            </div>
+            <div id="top-right">
+                <div id="top-links"><a href="#">Help</a> <a href="#">Contact Us</a></div>
+                <div id="user-functions" class="ui-corner-bl">
+                    <div id="welcome-message"><span class="icon-user"></span>Hi Jeremy</div>
+                    <p>You last logged in on <strong>12/8/14</strong></p>
+                    <a id="logout" href="#">Log Out</a>
+                </div>
+            </div>
+        </div>
+        <div id="banner">
+            <div class="dots">
+                <div class="container">
+                    ...
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="content-container">
+        <div class="container">
+            <div id="left-sidebar">
+                ...
+            </div>
+            <div id="content">
+                ...
+            </div>
+            <div id="right-sidebar">
+                ...
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="container">
+            <ul>
+                <li><a href="#">Copyright</a></li>
+                <li><a href="#">Disclaimer</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Any other footer links</a></li>
+            </ul>
+        </div>
+    </div>
+</div></xmp>
+            </div>
+
+            <!-- Menu -->
+            <h2 class="red-text">Menu</h2>
+            <p>Apply the class <code>.current</code> to the active menu item.</p>
+            <div class="highlight">
+                <xmp class="prettyprint"><ul id="menu">
+    <li class="first current"><a href="#" class="current">Home</a></li>
+    <li><a href="#">Messages</a></li>
+    <li><a href="#">My Account</a></li>
+    <li class="last"><a href="#">Tests &amp; Workshops</a></li>
+</ul></xmp>
+            </div>
+            <p>For pages 4 and 5, the menu has 5 items, so you need to add the class <code>five</code> to the <code>#menu</code> div.</p>
+            <div class="highlight">
+                <xmp class="prettyprint"><ul id="menu" class="five">
+    <li class="first"><a href="#" class="current">Home</a></li>
+    <li><a href="#">Messages</a></li>
+    <li><a href="#">My Account</a></li>
+    <li class="current"><a href="#">My Application</a></li>
+    <li class="last"><a href="#">Tests &amp; Workshops</a></li>
+</ul></xmp>
+            </div>
+
+            <!-- Banner -->
+            <h2 class="red-text">Banner</h2>
+            <p>This is the standard wrapper for the banner div.</p>
+            <div class="highlight">
+                <xmp class="prettyprint"><div id="banner">
+    <div class="dots">
+        <div class="container">
+            ...
+        </div>
+    </div>
+</div></xmp>
+            </div>
+            <p>Within the <code>.container</code> div you can use the following options:</p>
+            <div class="highlight">
+                <xmp class="prettyprint"><div class="banner-left">
+    ...
+</div>
+<div id="key-dates">
+    ...
+</div></xmp>
+            </div>
+            <p><code>.banner-full</code> is usually used for sub pages (i.e. pages 4 and 5) with a heading 1.</p>
+            <div class="highlight">
+                <xmp class="prettyprint"><div class="banner-full">
+    <h1>Heading 1</h1>
+</div></xmp>
+        </div>
+
+
             <!-- Buttons -->
             <h2 class="red-text">Buttons</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas risus ante, consequat a vehicula ut, egestas ut nunc. Phasellus justo ligula, tempus a.</p>
             <div class="bs-example">
-                <p><a class="ui-button btn-grey-light" href="#"><span class="ui-icon-arrow-right-dark"></span>.btn-grey-light</a></p>
-                <p><a class="ui-button btn-grey" href="#"><span class="ui-icon-arrow-right-dark"></span>.btn-grey</a></p>
-                <p><a class="ui-button btn-grey-dark" href="#"><span class="ui-icon-arrow-right-light"></span>.btn-grey-dark</a></p>
-                <p><a class="ui-button btn-red" href="#"><span class="ui-icon-arrow-right-light"></span>.btn-red</a></p>
+                <p><a class="ui-button btn-grey-light" href="#"><span class="icon-arrow-right-dark"></span>.btn-grey-light</a></p>
+                <p><a class="ui-button btn-grey" href="#"><span class="icon-arrow-right-dark"></span>.btn-grey</a></p>
+                <p><a class="ui-button btn-grey-dark" href="#"><span class="icon-arrow-right-light"></span>.btn-grey-dark</a></p>
+                <p><a class="ui-button btn-red" href="#"><span class="icon-arrow-right-light"></span>.btn-red</a></p>
             </div>
             <div class="highlight">
-                <xmp class="prettyprint"><p><a class="ui-button btn-grey-light" href="#"><span class="ui-icon-arrow-right-dark"></span>.btn-grey-light</a></p>
-<p><a class="ui-button btn-grey" href="#"><span class="ui-icon-arrow-right-dark"></span>.btn-grey</a></p>
-<p><a class="ui-button btn-grey-dark" href="#"><span class="ui-icon-arrow-right-light"></span>.btn-grey-dark</a></p>
-<p><a class="ui-button btn-red" href="#"><span class="ui-icon-arrow-right-light"></span>.btn-red</a></p></xmp>
+                <xmp class="prettyprint"><p><a class="ui-button btn-grey-light" href="#"><span class="icon-arrow-right-dark"></span>.btn-grey-light</a></p>
+<p><a class="ui-button btn-grey" href="#"><span class="icon-arrow-right-dark"></span>.btn-grey</a></p>
+<p><a class="ui-button btn-grey-dark" href="#"><span class="icon-arrow-right-light"></span>.btn-grey-dark</a></p>
+<p><a class="ui-button btn-red" href="#"><span class="icon-arrow-right-light"></span>.btn-red</a></p></xmp>
             </div>
+
             <!-- Icons -->
             <h2 class="red-text">Icons</h2>
-            <div class="bs-example">
-                TODO
+            <p>Note: The Twitter Boostrap CSS used for this style-guide is messing up the icons css (so ignore the slightly off styling).</p>
+            <div class="bs-example" style="background-color: #f8efc0; height: 100px;">
+
+                <span class="icon-on-hold"></span>
+                <span class="icon-in-progress"></span>
+                <span class="icon-withdrawn"></span>
+                <span class="icon-offer-received">1</span>
+                <span class="icon-arrow-up"></span>
+                <span class="icon-arrow-down"></span>
+                <span class="icon-messages">4</span>
+                <span class="icon-user"></span>
+                <span class="icon-arrow-right-light"></span>
+                <span class="icon-arrow-right-dark"></span>
             </div>
             <div class="highlight">
-                <xmp class="prettyprint">TODO</xmp>
+                <xmp class="prettyprint"><span class="icon-on-hold"></span>
+<span class="icon-in-progress"></span>
+<span class="icon-withdrawn"></span>
+<span class="icon-offer-received">1</span>
+<span class="icon-arrow-up"></span>
+<span class="icon-arrow-down"></span>
+<span class="icon-messages">4</span>
+<span class="icon-user"></span>
+<span class="icon-arrow-right-light"></span>
+<span class="icon-arrow-right-dark"></span></xmp>
             </div>
 
             <!-- Boxes -->
             <h2 class="red-text">Boxes</h2>
             <p>Boxes must be contained within a div with the <code>col-1, col-2, col-3, col-4</code> and an inner div with the classes <code>grey ui-corner-tl fixed-height</code>.</p>
+            <p><code>.fixed-height</code> is optional and will be ignored in tablet and mobile responsive.</p>
             <div class="bs-example">
                 <div class="col-1">
                     <div class="grey ui-corner-tl fixed-height">
                         <h2>Secondary Education</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas risus ante, consequat a vehicula ut, egestas ut nunc. Phasellus justo ligula, tempus a</p>
-                        <a class="ui-button btn-grey-light" href="#"><span class="ui-icon-arrow-right-dark"></span>View or Edit</a>
+                        <a class="ui-button btn-grey-light" href="#"><span class="icon-arrow-right-dark"></span>View or Edit</a>
                     </div>
                 </div>
             </div>
@@ -75,37 +211,39 @@
     <div class="grey ui-corner-tl fixed-height">
         <h2>Secondary Education</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas risus ante, consequat a vehicula ut, egestas ut nunc. Phasellus justo ligula, tempus a</p>
-        <a class="ui-button btn-grey-light" href="#"><span class="ui-icon-arrow-right-dark"></span>View or Edit</a>
+        <a class="ui-button btn-grey-light" href="#"><span class="icon-arrow-right-dark"></span>View or Edit</a>
     </div>
 </div></xmp>
             </div>
 
-            <!-- Layouts -->
-            <h2 class="red-text">Layouts</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas risus ante, consequat a vehicula ut, egestas ut nunc. Phasellus justo ligula, tempus a.</p>
-            <div class="bs-example">
-                TODO
-            </div>
-            <div class="highlight">
-                <xmp class="prettyprint">TODO</xmp>
-            </div>
-
             <!-- Key Dates -->
             <h2 class="red-text">Key Dates</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas risus ante, consequat a vehicula ut, egestas ut nunc. Phasellus justo ligula, tempus a.</p>
             <div class="bs-example">
-                TODO
+                <p><img src="style-guide/images/key-dates.png"/></p>
             </div>
             <div class="highlight">
-                <xmp class="prettyprint">TODO</xmp>
+                <xmp class="prettyprint"><div id="key-dates">
+    <div class="box ui-corner-tl">
+        <h2>Key Dates</h2>
+        <div class="dates-container">
+            <ul class="dates-list">
+                <li><span class="date">Fri 19 Sep 2014</span><br/>Due date to apply and submit documentation for 2 October offer round</li>
+                <li><span class="date">Monday 29 Sep 2014</span><br/>Applicants choosing BPAY should make payment by today to avoid higher application fees</li>
+                <li><span class="date">Tues 30 Sep 2014</span><br/>Due date for on-time applications.</li>
+                <li><span class="date">Fri 1 Nov 2014</span><br/>Some other due date.</li>
+                <li><span class="date">Wed 4 Nov 2014</span><br/>Another important date.</li>
+            </ul>
+        </div>
+        <div class="buttons"><a href="#" class="arrow-up"><span class="icon-arrow-up"></span></a><a href="#" class="arrow-down"><span class="icon-arrow-down"></span></a></div>
+    </div>
+</div></xmp>
             </div>
 
             <!-- Application Status -->
             <h2 class="red-text">Application Status</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas risus ante, consequat a vehicula ut, egestas ut nunc. Phasellus justo ligula, tempus a.</p>
+            <h3>Portrait</h3>
             <div class="bs-example">
                 <p><img src="style-guide/images/application-status-portrait.png"/></p>
-                <p><img src="style-guide/images/application-status-landscape.png"/></p>
             </div>
             <div class="highlight">
                 <xmp class="prettyprint"><div class="application-status portrait">
@@ -117,8 +255,14 @@
         <li>Provide Documents</li>
         <li>Edit Course Preferences</li>
     </ol>
-</div>
-<div class="application-status landscape">
+</div></xmp>
+            </div>
+            <h3>Landscape</h3>
+            <div class="bs-example">
+                <p><img src="style-guide/images/application-status-landscape.png"/></p>
+            </div>
+            <div class="highlight">
+                <xmp class="prettyprint"><div class="application-status landscape">
     <div class="left">
         <h2>Application Status</h2>
         <div class="status"><span class="icon-on-hold"></span>On Hold</div>
@@ -133,10 +277,9 @@
     </div>
 </div></xmp>
             </div>
-
             <!-- Messages -->
             <h2 class="red-text">Messages</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas risus ante, consequat a vehicula ut, egestas ut nunc. Phasellus justo ligula, tempus a.</p>
+            <p>To change the number of messages, you can use <code>$('#messages .icon-messages').html('10');</code>.</p>
             <div class="bs-example">
                 <img src="style-guide/images/messages.png"/>
             </div>
@@ -167,10 +310,9 @@
 
             <!-- Countdown -->
             <h2 class="red-text">Countdown</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas risus ante, consequat a vehicula ut, egestas ut nunc. Phasellus justo ligula, tempus a.</p>
+            <h3>Portrait</h3>
             <div class="bs-example">
                 <p><img src="style-guide/images/countdown-portrait.png"/></p>
-                <p><img src="style-guide/images/countdown-landscape.png"/></p>
             </div>
             <div class="highlight">
                 <xmp class="prettyprint"><div class="countdown portrait">
@@ -189,9 +331,14 @@
             <span class="number">25</span> <span class="suffix">Mins</span>
         </div>
     </div>
-</div>
-
-<div class="countdown landscape white ui-corner-tl">
+</div></xmp>
+            </div>
+            <h3>Landscape</h3>
+            <div class="bs-example">
+                <p><img src="style-guide/images/countdown-landscape.png"/></p>
+            </div>
+            <div class="highlight">
+                <xmp class="prettyprint"><div class="countdown landscape white ui-corner-tl">
     <span class="label">Time left to accept offer:</span>
     <div class="countdown-text">
         <div class="countdown-text">

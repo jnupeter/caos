@@ -12,8 +12,26 @@
  *
  * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
  */
-#key-dates .ui-corner-tl .arrow-down {
+.icon-arrow-right-dark {
+  background: url('../images/sprite.png') no-repeat 0 -34px;
+  width: 12px;
+  height: 18px;
+}
+
+.icon-arrow-right-light {
+  background: url('../images/sprite.png') no-repeat 0 0;
+  width: 12px;
+  height: 18px;
+}
+
+.icon-arrow-down {
   background: url('../images/sprite.png') no-repeat -22px 0;
+  width: 29px;
+  height: 12px;
+}
+
+.icon-arrow-up {
+  background: url('../images/sprite.png') no-repeat -22px -35px;
   width: 29px;
   height: 12px;
 }
@@ -207,9 +225,16 @@
   }
   #header #top-right {
     width: 100%;
+    height: 25px;
   }
-  #header #top-right #user-functions {
-    margin-right: 10px;
+  #header #top-right #user-functions #welcome-message,
+  #header #top-right #user-functions p {
+    display: none;
+  }
+  #header #top-right #user-functions #logout {
+    margin: 4px 10px 0 0;
+    line-height: 26px;
+    display: block;
   }
   #header #logo .portrait {
     display: none;
@@ -635,6 +660,11 @@ h2 {
   margin-top: 0;
 }
 
+@media only screen and (max-width: 649px), only screen and (max-device-width: 649px) {
+  .application-status.landscape .status {
+    width: auto;
+  }
+}
 .messages .message-header {
   background-color: rgba(0, 0, 0, 0.4);
   height: 30px;
@@ -713,6 +743,7 @@ h2 {
   font-size: 20px;
   line-height: 26px;
   margin: 15px 0 0 0;
+  width: 450px;
 }
 .banner-left .btn-red {
   margin-top: 20px;
@@ -731,13 +762,13 @@ h2 {
 #key-dates .ui-corner-tl h2 {
   color: #FFFFFF;
 }
-#key-dates .ui-corner-tl div {
+#key-dates .ui-corner-tl .dates-container {
   height: 200px;
   overflow: hidden;
   margin-bottom: 5px;
 }
-#key-dates .ui-corner-tl .arrow-down {
-  display: block;
+#key-dates .ui-corner-tl .buttons {
+  width: 58px;
   margin: 0 auto;
 }
 
@@ -752,9 +783,8 @@ h2 {
 }
 
 @media only screen and (max-width: 959px), only screen and (min-device-width: 768px) and (max-device-width: 959px) {
-  .banner-text,
-  .banner-full {
-    padding: 0 20px;
+  .banner-left p {
+    width: 100%;
   }
 }
 @media only screen and (max-width: 767px), only screen and (min-device-width: 650px) and (max-device-width: 767px) {
@@ -780,7 +810,7 @@ h2 {
   }
   #banner .dots .container h1 {
     margin-top: 15px;
-    font-size: 35px;
+    font-size: 30px;
   }
   #banner .dots .container .btn-red {
     position: relative;
@@ -918,6 +948,13 @@ h2 {
     position: fixed;
   }
 }
+.icon-hamburger {
+  width: 20px;
+  height: 20px;
+  float: left;
+  background: url('../images/sprite.png') no-repeat 0 -163px;
+}
+
 .icon-user {
   background: #555 url('../images/sprite.png') no-repeat 5px -67px;
   width: 17px;
@@ -946,13 +983,6 @@ h2 {
   font-size: 16px;
   line-height: 23px;
   color: #FFFFFF;
-}
-
-.icon-hamburger {
-  width: 20px;
-  height: 20px;
-  float: left;
-  background: url('../images/sprite.png') no-repeat 0 -163px;
 }
 
 .icon-on-hold {
@@ -1017,4 +1047,20 @@ h2 {
   font-size: 16px;
   line-height: 23px;
   color: #FFFFFF;
+}
+
+.icon-arrow-right-light {
+  float: left;
+}
+
+.icon-arrow-right-dark {
+  float: left;
+}
+
+.icon-arrow-down {
+  float: left;
+}
+
+.icon-arrow-up {
+  float: left;
 }
