@@ -532,6 +532,387 @@ h2 {
     display: none;
   }
 }
+form button,
+form input[type="button"],
+form input[type="submit"] {
+  height: 32px;
+}
+form .form-row input[type="text"],
+form .form-row input[type="password"],
+form .form-row input[type="email"],
+form .form-row input[type="tel"],
+form .form-row input[type="url"],
+form .form-row input[type="date"],
+form .form-row textarea,
+form .form-row select {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.15);
+  border: 3px solid #E3E3E3;
+  padding: 7px;
+  display: block;
+  font-size: 13px;
+  line-height: 18px;
+  height: 18px;
+  outline: medium none;
+  overflow: hidden;
+  text-indent: 3px;
+  float: left;
+  margin-right: 10px;
+  box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+}
+form .form-row input[type="text"]:focus,
+form .form-row input[type="password"]:focus,
+form .form-row input[type="email"]:focus,
+form .form-row input[type="tel"]:focus,
+form .form-row input[type="url"]:focus,
+form .form-row input[type="date"]:focus,
+form .form-row select:focus,
+form .form-row textarea:focus {
+  border: 3px solid #333333;
+}
+form .form-row textarea {
+  overflow: visible;
+  min-height: 60px;
+}
+form .form-row select {
+  -webkit-appearance: button;
+  line-height: 18px;
+  height: 18px;
+  padding-right: 40px;
+  cursor: pointer;
+  box-sizing: content-box;
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+}
+form .form-row select::-ms-expand {
+  display: none !important;
+}
+form .form-row input[type="checkbox"],
+form .form-row input[type="radio"] {
+  display: none;
+}
+form .form-row input[type="checkbox"] + label,
+form .form-row input[type="radio"] + label {
+  display: inline-block;
+  height: 21px;
+  background: url('../images/sprite-forms.png') no-repeat;
+  cursor: pointer;
+  line-height: 24px;
+  text-indent: 30px;
+}
+form .form-row input[type="checkbox"] + label {
+  background-position: -2px -101px;
+}
+form .form-row input[type="radio"] + label {
+  background-position: -2px -2px;
+}
+form .form-row input[type="checkbox"]:checked + label {
+  background-position: -2px -150px;
+}
+form .form-row input[type="radio"]:checked + label {
+  background-position: -2px -51px;
+}
+form .form-row.error input[type="checkbox"] + label {
+  background-position: -2px -126px;
+}
+form .form-row.error input[type="checkbox"]:checked + label {
+  background-position: -2px -175px;
+}
+form .form-row.error input[type="radio"] + label {
+  background-position: -2px -27px;
+}
+form .form-row.error input[type="radio"]:checked + label {
+  background-position: -2px -76px;
+}
+
+.text-row,
+.form-row {
+  clear: both;
+  padding: 5px 0;
+  overflow: hidden;
+  border-bottom: 1px solid #DEDEDE;
+}
+.text-row .btn-help,
+.form-row .btn-help {
+  margin: 10px 0 0 0;
+}
+.text-row .label,
+.form-row .label {
+  min-height: 7px;
+  width: 270px;
+  text-align: right;
+  display: block;
+  float: left;
+  line-height: 24px;
+  margin: 7px 7px 7px 0;
+}
+.text-row .two-line,
+.form-row .two-line {
+  margin: 0 7px 0 0;
+  line-height: 20px;
+}
+.text-row .checkbox-label,
+.form-row .checkbox-label {
+  float: left;
+}
+.text-row .input-full-width,
+.form-row .input-full-width {
+  width: 333px;
+}
+.text-row .input-full-width.datepicker,
+.form-row .input-full-width.datepicker {
+  background-position: 318px -512px;
+}
+.text-row .input-half-width,
+.form-row .input-half-width {
+  width: 165px;
+}
+.text-row .input-third-width,
+.form-row .input-third-width {
+  width: 90px;
+}
+.text-row .select-full-width,
+.form-row .select-full-width {
+  display: block;
+  float: left;
+}
+.text-row .select-half-width,
+.form-row .select-half-width {
+  display: block;
+  float: left;
+  width: 132px;
+  background: url('../images/sprite-forms.png') no-repeat 144px -198px;
+}
+.text-row .select-half-width:hover,
+.form-row .select-half-width:hover {
+  background: url('../images/sprite-forms.png') no-repeat 144px -232px;
+}
+.text-row .select-third-width,
+.form-row .select-third-width {
+  display: block;
+  float: left;
+}
+.text-row .select-day,
+.form-row .select-day {
+  width: 30px;
+  background: url('../images/sprite-forms.png') no-repeat 42px -198px;
+}
+.text-row .select-day:hover,
+.form-row .select-day:hover {
+  background: url('../images/sprite-forms.png') no-repeat 42px -232px;
+}
+.text-row .select-month,
+.form-row .select-month {
+  width: 84px;
+  background: url('../images/sprite-forms.png') no-repeat 96px -198px;
+}
+.text-row .select-month:hover,
+.form-row .select-month:hover {
+  background: url('../images/sprite-forms.png') no-repeat 96px -232px;
+}
+.text-row .select-year,
+.form-row .select-year {
+  width: 60px;
+  background: url('../images/sprite-forms.png') no-repeat 72px -198px;
+}
+.text-row .select-year:hover,
+.form-row .select-year:hover {
+  background: url('../images/sprite-forms.png') no-repeat 72px -232px;
+}
+.text-row .text,
+.form-row .text {
+  float: left;
+  margin: 7px 7px 7px 0;
+  line-height: 24px;
+}
+.text-row div.radio-group,
+.form-row div.radio-group {
+  float: left;
+}
+.text-row div.message,
+.form-row div.message {
+  font-size: 11px;
+  width: 255px;
+  color: #565658;
+  line-height: 13px;
+  float: right;
+}
+.text-row.terms-and-conditions,
+.form-row.terms-and-conditions {
+  background: none;
+  padding: 10px 0;
+}
+.text-row.error .feedback span.message,
+.form-row.error .feedback span.message {
+  color: #DF0019;
+}
+.text-row.error input[type="text"],
+.text-row.error input[type="password"],
+.text-row.error input[type="email"],
+.text-row.error input[type="tel"],
+.text-row.error input[type="url"],
+.text-row.error input[type="date"],
+.text-row.error textarea,
+.text-row.error select,
+.form-row.error input[type="text"],
+.form-row.error input[type="password"],
+.form-row.error input[type="email"],
+.form-row.error input[type="tel"],
+.form-row.error input[type="url"],
+.form-row.error input[type="date"],
+.form-row.error textarea,
+.form-row.error select {
+  border: 3px solid #F25F72;
+}
+.text-row.text-only-center, .text-row.text-only-left, .text-row.text-only-right,
+.form-row.text-only-center,
+.form-row.text-only-left,
+.form-row.text-only-right {
+  background: none;
+  background-color: #EFEFEF;
+  min-height: 0;
+  padding: 10px;
+}
+.text-row.text-only-center p, .text-row.text-only-left p, .text-row.text-only-right p,
+.form-row.text-only-center p,
+.form-row.text-only-left p,
+.form-row.text-only-right p {
+  margin: 10px 0;
+}
+.text-row.text-only-center,
+.form-row.text-only-center {
+  text-align: center;
+}
+.text-row.text-only-left,
+.form-row.text-only-left {
+  text-align: left;
+}
+.text-row.text-only-right,
+.form-row.text-only-right {
+  text-align: right;
+}
+.text-row img,
+.form-row img {
+  display: block;
+  float: left;
+  top: 5px;
+  position: relative;
+}
+
+.text-row {
+  background: none;
+}
+.text-row .label {
+  font-weight: bold;
+}
+
+.required {
+  color: #DF0019;
+  margin-right: 3px;
+}
+
+#content form .left {
+  width: 100%;
+}
+#content form label,
+#content form .label {
+  width: 130px;
+}
+#content form .message {
+  width: 272px;
+}
+#content .edit-link {
+  float: right;
+  line-height: 24px;
+  margin: 7px 0 7px 0;
+  display: block;
+  width: 40px;
+  color: #DF0019;
+}
+#content .editable-field {
+  line-height: 24px;
+  margin: 7px 7px 7px 0;
+  float: left;
+  display: block;
+}
+#content .inline-fields {
+  margin: 5px 0 0 157px;
+}
+#content .inline-fields a.btn-save {
+  float: left;
+  width: auto;
+  margin: 5px 0 0 10px;
+}
+#content .inline-fields a.btn-save .ui-button-text {
+  padding: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+#content .inline-fields a.btn-cancel {
+  margin: 8px 0;
+  float: left;
+  color: #333333;
+  clear: left;
+}
+
+@media only screen and (max-width: 959px), only screen and (min-device-width: 768px) and (max-device-width: 959px) {
+  .form-row,
+  .text-row {
+    background: none !important;
+  }
+  .form-row.text-only-center, .form-row.text-only-left,
+  .text-row.text-only-center,
+  .text-row.text-only-left {
+    background: #EFEFEF !important;
+  }
+  .form-row .left,
+  .text-row .left {
+    float: none !important;
+  }
+  .form-row div.message,
+  .text-row div.message {
+    width: auto !important;
+    clear: both;
+    float: left;
+    margin: 5px 0 0 0;
+  }
+  .form-row.error div.message,
+  .text-row.error div.message {
+    color: #DF0019;
+  }
+
+  .buttons {
+    width: 100% !important;
+  }
+
+  #content form .label {
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding-left: 10px;
+  }
+  #content form .label .required {
+    margin: 0 0 0 -10px;
+  }
+  #content .edit-link {
+    margin-top: 0;
+  }
+  #content .editable-field {
+    margin: 0 0 0 5px;
+  }
+  #content .inline-fields {
+    margin-left: 5px;
+  }
+}
 .countdown.portrait .countdown-text {
   text-shadow: 0 2px rgba(0, 0, 0, 0.3);
 }
@@ -1063,4 +1444,13 @@ h2 {
 
 .icon-arrow-up {
   float: left;
+}
+
+.icon-edit {
+  width: 16px;
+  display: block;
+  height: 16px;
+  float: left;
+  margin-right: 3px;
+  background: #FFFFFF url("../images/sprite.png") no-repeat 0px -190px;
 }
