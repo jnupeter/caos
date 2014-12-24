@@ -16,111 +16,113 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 	<body>
-		<div id="wrap">
-
-            <div id="header">
-                <div class="container">
-                    <div class="header-left">
-                        <div id="toggle-menu"><a href="#"><span class="icon-hamburger"></span>Menu</a></div>
-                        <div id="logo">
-                            <a href="style-guide.html"><img src="resources/images/logo.png" alt="QTAC" width="61px" height="97px" class="portrait"/><img src="resources/images/logo-mobile.png" alt="QTAC" width="120px" height="25px" class="landscape"/></a>
-                        </div>
-                        <ul id="menu">
-                            <li class="first current"><a href="#" class="current">Home</a></li>
-                            <li><a href="#">Messages</a></li>
-                            <li><a href="#">My Account</a></li>
-                            <li class="last"><a href="#">Tests &amp; Workshops</a></li>
-                        </ul>
+        <div id="header">
+            <div class="container">
+                <div class="header-left">
+                    <button type="button" id="toggle-menu" class="navbar-toggle">
+                        <span class="toggle-menu-text">Menu</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div id="logo">
+                        <a href="style-guide.html"><img src="resources/images/logo.png" alt="QTAC" width="61px" height="97px" class="portrait"/><img src="resources/images/logo-mobile.png" alt="QTAC" width="120px" height="25px" class="landscape"/></a>
                     </div>
-                    <div id="top-right">
-                        <div id="top-links"><a href="#">Help</a> <a href="#">Contact Us</a></div>
-                        <div id="user-functions" class="ui-corner-bl">
-                            <div id="welcome-message"><span class="icon-user"></span>Hi Jeremy</div>
-                            <p>You last logged in on <strong>12/8/14</strong></p>
-                            <a id="logout" href="#">Log Out</a>
-                        </div>
-                    </div>
-                </div>
-                <div id="banner">
-                    <div class="dots">
-                        <div class="container">
-                            <div class="banner-left">
-                                <h1>Applications are Open</h1>
-                                <p>Short piece of information goes here</p>
-                                <a href="#" class="ui-button btn-red"><span class="icon-arrow-right-light"></span>Apply Now</a>
-                            </div>
-                            <div id="key-dates">
-                                <div class="box ui-corner-tl">
-                                    <h2>Key Dates</h2>
-                                    <div class="dates-container">
-                                        <ul class="dates-list">
-                                            <li><span class="date">Fri 19 Sep 2014</span><br/>Due date to apply and submit documentation for 2 October offer round</li>
-                                            <li><span class="date">Monday 29 Sep 2014</span><br/>Applicants choosing BPAY should make payment by today to avoid higher application fees</li>
-                                            <li><span class="date">Tues 30 Sep 2014</span><br/>Due date for on-time applications.</li>
-                                            <li><span class="date">Fri 1 Nov 2014</span><br/>Some other due date.</li>
-                                            <li><span class="date">Wed 4 Nov 2014</span><br/>Another important date.</li>
-                                        </ul>
-                                    </div>
-                                    <div class="buttons"><a href="#" class="arrow-up"><span class="icon-arrow-up"></span></a><a href="#" class="arrow-down"><span class="icon-arrow-down"></span></a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="content-container">
-                <div class="container">
-                    <div id="left-sidebar">
-                        <div class="dark-grey ui-corner-tl fixed-height">
-                            <h2>Apply Now</h2>
-                            <p>Apply for courses starting Semester 3, Semester 1 and Semester 2 across one admissions period.</p>
-                            <a class="ui-button btn-grey-medium" href="#"><span class="icon-arrow-right-light"></span>Apply Now</a>
-                        </div>
-                    </div>
-                    <div id="content">
-                        <div class="col-1">
-                            <div class="grey ui-corner-tl fixed-height">
-                                <h2>My Account</h2>
-                                <p>Update your details, change account authorisations and view payment receipts.</p>
-                                <a class="ui-button btn-grey-dark" href="#"><span class="icon-arrow-right-light"></span>View or Edit</a>
-                            </div>
-                        </div>
-                        <div class="col-2">
-                            <div class="white ui-corner-tl fixed-height">
-                                <h2>Tests &amp; Workshops</h2>
-                                <p>Register to sit a Special Tertiary Admissions Test (STAT), a Personal Competency Assessment (PCA) or attend a workshop to prepare for your test.</p>
-                                <a class="ui-button btn-grey-light" href="#"><span class="icon-arrow-right-dark"></span>Register</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="right-sidebar">
-                        <div class="red ui-corner-tl fixed-height">
-                            <h2>Offer Rounds</h2>
-                            <ul class="dates-list">
-                                <li><span class="date">Thurs 28 Aug 2014 (9am)</span></li>
-                                <li><span class="date">Thurs 11 Sep 2014 (9am)</span></li>
-                                <li>
-                                    <span class="date">Thurs 2 October 2014 (9am)</span><br/>
-                                    major offer round for most courses commencing Semester 3, 2014
-                                </li>
-                                <li>
-                                    <span class="date">Thurs 16 Oct 2014 (9am)</span><br/>
-                                    Further offer round for courses
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="footer">
-                <div class="container">
-                    <ul>
-                        <li><a href="#">Copyright</a></li>
-                        <li><a href="#">Disclaimer</a></li>
-                        <li><a href="#">Privacy</a></li>
-                        <li><a href="#">Any other footer links</a></li>
+                    <ul id="menu">
+                        <li class="first current"><a href="#" class="current">Home</a></li>
+                        <li><a href="#">Messages</a></li>
+                        <li><a href="#">My Account</a></li>
+                        <li class="last"><a href="#">Tests &amp; Workshops</a></li>
                     </ul>
                 </div>
+                <div id="top-right">
+                    <div id="top-links"><a href="#">Help</a> <a href="#">Contact Us</a></div>
+                    <div id="user-functions" class="ui-corner-bl">
+                        <div id="welcome-message"><span class="icon-user"></span>Hi Jeremy</div>
+                        <p>You last logged in on <strong>12/8/14</strong></p>
+                        <a id="logout" href="#">Log Out</a>
+                    </div>
+                </div>
+            </div>
+            <div id="banner">
+                <div class="dots">
+                    <div class="container">
+                        <div class="banner-left">
+                            <h1>Applications are Open</h1>
+                            <p>Short piece of information goes here</p>
+                            <a href="#" class="ui-button btn-red"><span class="icon-arrow-right-light"></span>Apply Now</a>
+                        </div>
+                        <div id="key-dates">
+                            <div class="box ui-corner-tl">
+                                <h2>Key Dates</h2>
+                                <div class="dates-container">
+                                    <ul class="dates-list">
+                                        <li><span class="date">Fri 19 Sep 2014</span><br/>Due date to apply and submit documentation for 2 October offer round</li>
+                                        <li><span class="date">Monday 29 Sep 2014</span><br/>Applicants choosing BPAY should make payment by today to avoid higher application fees</li>
+                                        <li><span class="date">Tues 30 Sep 2014</span><br/>Due date for on-time applications.</li>
+                                        <li><span class="date">Fri 1 Nov 2014</span><br/>Some other due date.</li>
+                                        <li><span class="date">Wed 4 Nov 2014</span><br/>Another important date.</li>
+                                    </ul>
+                                </div>
+                                <div class="buttons"><a href="#" class="arrow-up"><span class="icon-arrow-up"></span></a><a href="#" class="arrow-down"><span class="icon-arrow-down"></span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content-container">
+            <div class="container">
+                <div id="left-sidebar">
+                    <div class="dark-grey ui-corner-tl fixed-height">
+                        <h2>Apply Now</h2>
+                        <p>Apply for courses starting Semester 3, Semester 1 and Semester 2 across one admissions period.</p>
+                        <a class="ui-button btn-grey-medium" href="#"><span class="icon-arrow-right-light"></span>Apply Now</a>
+                    </div>
+                </div>
+                <div id="content">
+                    <div class="col-1">
+                        <div class="grey ui-corner-tl fixed-height">
+                            <h2>My Account</h2>
+                            <p>Update your details, change account authorisations and view payment receipts.</p>
+                            <a class="ui-button btn-grey-dark" href="#"><span class="icon-arrow-right-light"></span>View or Edit</a>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="white ui-corner-tl fixed-height">
+                            <h2>Tests &amp; Workshops</h2>
+                            <p>Register to sit a Special Tertiary Admissions Test (STAT), a Personal Competency Assessment (PCA) or attend a workshop to prepare for your test.</p>
+                            <a class="ui-button btn-grey-light" href="#"><span class="icon-arrow-right-dark"></span>Register</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="right-sidebar">
+                    <div class="red ui-corner-tl fixed-height">
+                        <h2>Offer Rounds</h2>
+                        <ul class="dates-list">
+                            <li><span class="date">Thurs 28 Aug 2014 (9am)</span></li>
+                            <li><span class="date">Thurs 11 Sep 2014 (9am)</span></li>
+                            <li>
+                                <span class="date">Thurs 2 October 2014 (9am)</span><br/>
+                                major offer round for most courses commencing Semester 3, 2014
+                            </li>
+                            <li>
+                                <span class="date">Thurs 16 Oct 2014 (9am)</span><br/>
+                                Further offer round for courses
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container">
+                <ul>
+                    <li><a href="#">Copyright</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Any other footer links</a></li>
+                </ul>
             </div>
         </div>
 	</body>

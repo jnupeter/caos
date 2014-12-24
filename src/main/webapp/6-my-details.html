@@ -17,309 +17,312 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div id="wrap">
-        <div id="header">
-            <div class="container">
-                <div class="header-left">
-                    <div id="toggle-menu"><a href="#"><span class="icon-hamburger"></span>Menu</a></div>
-                    <div id="logo">
-                        <a href="style-guide.html"><img src="resources/images/logo.png" alt="QTAC" width="61px" height="97px" class="portrait"/><img src="resources/images/logo-mobile.png" alt="QTAC" width="120px" height="25px" class="landscape"/></a>
-                    </div>
-                    <ul id="menu" class="five">
-                        <li class="first"><a href="#" class="current">Home</a></li>
-                        <li><a href="#">Messages</a></li>
-                        <li class="current"><a href="#">My Account</a></li>
-                        <li><a href="#">My Application</a></li>
-                        <li class="last"><a href="#">Tests &amp; Workshops</a></li>
-                    </ul>
+    <div id="header">
+        <div class="container">
+            <div class="header-left">
+                <button type="button" id="toggle-menu" class="navbar-toggle">
+                    <span class="toggle-menu-text">Menu</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div id="logo">
+                    <a href="style-guide.html"><img src="resources/images/logo.png" alt="QTAC" width="61px" height="97px" class="portrait"/><img src="resources/images/logo-mobile.png" alt="QTAC" width="120px" height="25px" class="landscape"/></a>
                 </div>
-                <div id="top-right">
-                    <div id="top-links"><a href="#">Help</a> <a href="#">Contact Us</a></div>
-                    <div id="user-functions" class="ui-corner-bl">
-                        <div id="welcome-message"><span class="icon-user"></span>Hi Jeremy</div>
-                        <p>You last logged in on <strong>12/8/14</strong></p>
-                        <a id="logout" href="#">Log Out</a>
-                    </div>
-                </div>
-            </div>
-            <div id="banner">
-                <div class="dots">
-                    <div class="container">
-                        <div class="banner-full">
-                            <h1>My Details</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="content-container">
-            <div class="container">
-                <div id="left-sidebar" class="desktop-hide">
-                    <div id="j_idt10" class="ui-panelmenu ui-widget" role="menu">
-                        <div class="ui-panelmenu-panel">
-                            <h3 class="ui-widget ui-panelmenu-header ui-state-default ui-corner-all" role="tab">
-                                <span class="ui-icon ui-icon-triangle-1-e"></span><a href="#" tabindex="-1">Account Summary</a>
-                            </h3>
-                            <div class="ui-panelmenu-content ui-widget-content ui-helper-hidden" role="tabpanel" id="j_idt10_j_idt11"></div>
-                        </div>
-                        <div class="ui-panelmenu-panel">
-                            <h3 class="ui-widget ui-panelmenu-header ui-state-default ui-corner-all" role="tab">
-                                <span class="ui-icon ui-icon-triangle-1-e"></span><a href="#" tabindex="-1">My Details</a>
-                            </h3>
-                           <div class="ui-panelmenu-content ui-widget-content ui-helper-hidden" role="tabpanel" id="j_idt10_j_idt12"></div>
-                        </div>
-                        <div class="ui-panelmenu-panel">
-                            <h3 class="ui-widget ui-panelmenu-header ui-state-default ui-corner-all" role="tab">
-                                <span class="ui-icon ui-icon-triangle-1-e"></span><a href="#" tabindex="-1">Account Authorisation</a>
-                            </h3>
-                            <div class="ui-panelmenu-content ui-widget-content ui-helper-hidden" role="tabpanel" id="j_idt10_j_idt13"></div>
-                        </div>
-                        <div class="ui-panelmenu-panel">
-                            <h3 class="ui-widget ui-panelmenu-header ui-state-default ui-corner-all" role="tab">
-                                <span class="ui-icon ui-icon-triangle-1-e"></span><a href="#" tabindex="-1">Tax Invoices</a>
-                            </h3>
-                            <div class="ui-panelmenu-content ui-widget-content ui-helper-hidden" role="tabpanel" id="j_idt10_j_idt14"></div>
-                        </div>
-                    </div>
-                    <script id="j_idt10_s" type="text/javascript">PrimeFaces.cw("PanelMenu","widget_j_idt10",{id:"j_idt10",widgetVar:"widget_j_idt10"});</script>
-                </div>
-                <div id="content">
-                    <div class="white ui-corner-tl">
-                        <h2>My Details</h2>
-                        <form>
-                            <div class="form-row error">
-                                <label class="label" for="input"><span class="required">*</span>Name</label>
-                                <span class="editable-field">Ms Julie Anne Clarkson</span>
-                                <a href="#" class="edit-link"><span class="icon-edit"></span> Edit</a>
-                                <div class="inline-fields">
-                                    <input class="input-half-width" type="text" id="input" value="XX">
-                                    <div class="message">Please select a security question.</div>
-                                    <a class="btn-cancel" href="#">Cancel</a>
-                                    <a class="btn-save ui-button btn-grey-light" href="#">Save</a>
-                                </div>
-                            </div>
-                            <div class="form-row error">
-                                <label class="label" for="input"><span class="required">*</span>Preferred Name</label>
-                                <span class="editable-field">Julie</span>
-                                <a href="#" class="edit-link"><span class="icon-edit"></span> Edit</a>
-                                <div class="inline-fields">
-                                    <input class="input-half-width" type="text" id="input" value="XX">
-                                    <div class="message">Please select a security question.</div>
-                                    <a class="btn-cancel" href="#">Cancel</a>
-                                    <a class="btn-save ui-button btn-grey-light" href="#">Save</a>
-                                </div>
-                            </div>
-                            <div class="form-row error">
-                                <label class="label" for="input"><span class="required">*</span>Other Names</label>
-                                <span class="editable-field">No</span>
-                                <a href="#" class="edit-link"><span class="icon-edit"></span> Edit</a>
-                                <div class="inline-fields">
-                                    <input class="input-half-width" type="text" id="input" value="XX">
-                                    <div class="message">Please select a security question.</div>
-                                    <a class="btn-cancel" href="#">Cancel</a>
-                                    <a class="btn-save ui-button btn-grey-light" href="#">Save</a>
-                                </div>
-                            </div>
-                            <div class="form-row error">
-                                <label class="label" for="select"><span class="required">*</span>Select</label>
-                                <span class="editable-field">Yes</span>
-                                <a href="#" class="edit-link"><span class="icon-edit"></span> Edit</a>
-                                <div class="inline-fields">
-                                    <select class="select-half-width" id="select">
-                                        <option>Yes</option>
-                                        <option>No</option>
-                                    </select>
-                                    <div class="message">
-                                        This error message div is optional, only required if there is a message to be displayed.
-                                    </div>
-                                    <a class="btn-cancel" href="#">Cancel</a>
-                                    <a class="btn-save ui-button btn-grey-light" href="#">Save</a>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="white ui-corner-tl">
-                        <h2>Login Details</h2>
-                        <form>
-                            <div class="form-row error">
-                                <label class="label" for="input"><span class="required">*</span>Email</label>
-                                <span class="editable-field">julie@julieclarkson.com</span>
-                                <a href="#" class="edit-link"><span class="icon-edit"></span> Edit</a>
-                                <div class="inline-fields">
-                                    <input class="input-half-width" type="text" id="input" value="XX">
-                                    <div class="message">Please select a security question.</div>
-                                    <a class="btn-cancel" href="#">Cancel</a>
-                                    <a class="btn-save ui-button btn-grey-light" href="#">Save</a>
-                                </div>
-                            </div>
-                            <div class="form-row error">
-                                <label class="label" for="input"><span class="required">*</span>Password</label>
-                                <span class="editable-field">**********</span>
-                                <a href="#" class="edit-link"><span class="icon-edit"></span> Edit</a>
-                                <div class="inline-fields">
-                                    <input class="input-half-width" type="password" id="input" value="XX">
-                                    <div class="message">Please select a security question.</div>
-                                    <a class="btn-cancel" href="#">Cancel</a>
-                                    <a class="btn-save ui-button btn-grey-light" href="#">Save</a>
-                                </div>
-                            </div>
-                            <div class="form-row error">
-                                <label class="label" for="input"><span class="required">*</span>Security Question 1</label>
-                                <span class="editable-field">What's your mother's maiden name?</span>
-                                <a href="#" class="edit-link"><span class="icon-edit"></span> Edit</a>
-                                <div class="inline-fields">
-                                    <input class="input-half-width" type="text" id="input" value="XX">
-                                    <div class="message">Please select a security question.</div>
-                                    <a class="btn-cancel" href="#">Cancel</a>
-                                    <a class="btn-save ui-button btn-grey-light" href="#">Save</a>
-                                </div>
-                            </div>
-                            <div class="form-row error">
-                                <label class="label" for="input"><span class="required">*</span>Security Answer 1</label>
-                                <span class="editable-field">*********</span>
-                                <a href="#" class="edit-link"><span class="icon-edit"></span> Edit</a>
-                                <div class="inline-fields">
-                                    <input class="input-half-width" type="text" id="input" value="XX">
-                                    <div class="message">Please select a security question.</div>
-                                    <a class="btn-cancel" href="#">Cancel</a>
-                                    <a class="btn-save ui-button btn-grey-light" href="#">Save</a>
-                                </div>
-                            </div>
-                            <div class="form-row error">
-                                <label class="label" for="input"><span class="required">*</span>Security Question 2</label>
-                                <span class="editable-field">What city were you born in?</span>
-                                <a href="#" class="edit-link"><span class="icon-edit"></span> Edit</a>
-                                <div class="inline-fields">
-                                    <input class="input-half-width" type="text" id="input" value="XX">
-                                    <div class="message">Please select a security question.</div>
-                                    <a class="btn-cancel" href="#">Cancel</a>
-                                    <a class="btn-save ui-button btn-grey-light" href="#">Save</a>
-                                </div>
-                            </div>
-                            <div class="form-row error">
-                                <label class="label" for="input"><span class="required">*</span>Security Answer 2</label>
-                                <span class="editable-field">*********</span>
-                                <a href="#" class="edit-link"><span class="icon-edit"></span> Edit</a>
-                                <div class="inline-fields">
-                                    <input class="input-half-width" type="text" id="input" value="XX">
-                                    <div class="message">Please select a security question.</div>
-                                    <a class="btn-cancel" href="#">Cancel</a>
-                                    <a class="btn-save ui-button btn-grey-light" href="#">Save</a>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="white ui-corner-tl">
-                        <h2>Address</h2>
-                        <form>
-                            <div class="form-row error">
-                                <label class="label" for="input"><span class="required">*</span>Residential Address</label>
-                                <span class="editable-field">25 Jones Street, Brisbane QLD 4000</span>
-                                <a href="#" class="edit-link"><span class="icon-edit"></span> Edit</a>
-                                <div class="inline-fields">
-                                    <input class="input-half-width" type="text" id="input" value="XX">
-                                    <div class="message">Please select a security question.</div>
-                                    <a class="btn-cancel" href="#">Cancel</a>
-                                    <a class="btn-save ui-button btn-grey-light" href="#">Save</a>
-                                </div>
-                            </div>
-                            <div class="form-row error">
-                                <span class="label two-line"><span class="required">*</span>Permanent Residential Address</span>
-                                <span class="editable-field">Yes</span>
-                                <a href="#" class="edit-link"><span class="icon-edit"></span> Edit</a>
-                                <div class="inline-fields">
-                                    <div class="radio-group">
-                                        <input type="radio" name="group1" id="radio1" value="Radio_Unchecked"> <label for="radio1">Radio Unchecked</label><br>
-                                        <input type="radio" name="group1" id="radio2" value="Radio_Checked" checked=""> <label for="radio2">Radio Checked</label>
-                                    </div>
-                                    <div class="message">
-                                        This error message div is optional, only required if there is a message to be displayed.
-                                    </div>
-                                    <a class="btn-cancel" href="#">Cancel</a>
-                                    <a class="btn-save ui-button btn-grey-light" href="#">Save</a>
-                                </div>
-                            </div>
-                            <div class="form-row error">
-                                <span class="label two-line"><span class="required">*</span>Postal Address Same as Residential Address</span>
-                                <span class="editable-field">Yes</span>
-                                <a href="#" class="edit-link"><span class="icon-edit"></span> Edit</a>
-                                <div class="inline-fields">
-                                    <div class="radio-group">
-                                        <input type="radio" name="group1" id="radio1" value="Radio_Unchecked"> <label for="radio1">Radio Unchecked</label><br>
-                                        <input type="radio" name="group1" id="radio2" value="Radio_Checked" checked=""> <label for="radio2">Radio Checked</label>
-                                    </div>
-                                    <div class="message">
-                                        This error message div is optional, only required if there is a message to be displayed.
-                                    </div>
-                                    <a class="btn-cancel" href="#">Cancel</a>
-                                    <a class="btn-save ui-button btn-grey-light" href="#">Save</a>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="white ui-corner-tl">
-                        <h2>Contacts</h2>
-                        <form>
-                            <div class="form-row error">
-                                <label class="label" for="input"><span class="required">*</span>Mobile Phone Number</label>
-                                <span class="editable-field">0412 123 456</span>
-                                <a href="#" class="edit-link"><span class="icon-edit"></span> Edit</a>
-                                <div class="inline-fields">
-                                    <input class="input-half-width" type="text" id="input" value="XX">
-                                    <div class="message">Please select a security question.</div>
-                                    <a class="btn-cancel" href="#">Cancel</a>
-                                    <a class="btn-save ui-button btn-grey-light" href="#">Save</a>
-                                </div>
-                            </div>
-                            <div class="form-row error">
-                                <label class="label" for="input"><span class="required">*</span>Other Contact Number</label>
-                                <span class="editable-field">07 3214 1234</span>
-                                <a href="#" class="edit-link"><span class="icon-edit"></span> Edit</a>
-                                <div class="inline-fields">
-                                    <input class="input-half-width" type="text" id="input" value="XX">
-                                    <div class="message">Please select a security question.</div>
-                                    <a class="btn-cancel" href="#">Cancel</a>
-                                    <a class="btn-save ui-button btn-grey-light" href="#">Save</a>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div id="right-sidebar">
-                    <div class="medium-grey ui-corner-tl">
-                        <h2 class="orange-text">Help</h2>
-                        <ul class="faq-list">
-                            <li>
-                                <strong>What happens if I do not pay my fees?</strong><br/>
-                                Your application will not be processed until payment is received.
-                            </li>
-                            <li>
-                                <strong>What happens if I do not provide my documents?</strong><br/>
-                                Your application will not be processed until documents are received.
-                            </li>
-                            <li>
-                                <strong>What happens if I do not meet the minimum entry requirements for my course preference?</strong><br/>
-                                You are not eligible for a place in that course. You need to meet the requirements or change your preferences.
-                            </li>
-                            <li>
-                                <strong>What does it mean when it says there have been no offers made?</strong><br/>
-                                If there have been no offers, that course has not yet had an offer round. Check the course offer dates.</li>
-                            </li>
-                        </ul>
-                        <a class="ui-button btn-grey-light" href="#"><span class="icon-arrow-right-dark"></span>More Help</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="footer">
-            <div class="container">
-                <ul>
-                    <li><a href="#">Copyright</a></li>
-                    <li><a href="#">Disclaimer</a></li>
-                    <li><a href="#">Privacy</a></li>
-                    <li><a href="#">Any other footer links</a></li>
+                <ul id="menu" class="five">
+                    <li class="first"><a href="#" class="current">Home</a></li>
+                    <li><a href="#">Messages</a></li>
+                    <li class="current"><a href="#">My Account</a></li>
+                    <li><a href="#">My Application</a></li>
+                    <li class="last"><a href="#">Tests &amp; Workshops</a></li>
                 </ul>
             </div>
+            <div id="top-right">
+                <div id="top-links"><a href="#">Help</a> <a href="#">Contact Us</a></div>
+                <div id="user-functions" class="ui-corner-bl">
+                    <div id="welcome-message"><span class="icon-user"></span>Hi Jeremy</div>
+                    <p>You last logged in on <strong>12/8/14</strong></p>
+                    <a id="logout" href="#">Log Out</a>
+                </div>
+            </div>
+        </div>
+        <div id="banner">
+            <div class="dots">
+                <div class="container">
+                    <div class="banner-full">
+                        <h1>My Details</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="content-container">
+        <div class="container">
+            <div id="left-sidebar" class="desktop-hide">
+                <div id="j_idt10" class="ui-panelmenu ui-widget" role="menu">
+                    <div class="ui-panelmenu-panel">
+                        <h3 class="ui-widget ui-panelmenu-header ui-state-default ui-corner-all" role="tab">
+                            <span class="ui-icon ui-icon-triangle-1-e"></span><a href="#" tabindex="-1">Account Summary</a>
+                        </h3>
+                        <div class="ui-panelmenu-content ui-widget-content ui-helper-hidden" role="tabpanel" id="j_idt10_j_idt11"></div>
+                    </div>
+                    <div class="ui-panelmenu-panel">
+                        <h3 class="ui-widget ui-panelmenu-header ui-state-default ui-corner-all" role="tab">
+                            <span class="ui-icon ui-icon-triangle-1-e"></span><a href="#" tabindex="-1">My Details</a>
+                        </h3>
+                       <div class="ui-panelmenu-content ui-widget-content ui-helper-hidden" role="tabpanel" id="j_idt10_j_idt12"></div>
+                    </div>
+                    <div class="ui-panelmenu-panel">
+                        <h3 class="ui-widget ui-panelmenu-header ui-state-default ui-corner-all" role="tab">
+                            <span class="ui-icon ui-icon-triangle-1-e"></span><a href="#" tabindex="-1">Account Authorisation</a>
+                        </h3>
+                        <div class="ui-panelmenu-content ui-widget-content ui-helper-hidden" role="tabpanel" id="j_idt10_j_idt13"></div>
+                    </div>
+                    <div class="ui-panelmenu-panel">
+                        <h3 class="ui-widget ui-panelmenu-header ui-state-default ui-corner-all" role="tab">
+                            <span class="ui-icon ui-icon-triangle-1-e"></span><a href="#" tabindex="-1">Tax Invoices</a>
+                        </h3>
+                        <div class="ui-panelmenu-content ui-widget-content ui-helper-hidden" role="tabpanel" id="j_idt10_j_idt14"></div>
+                    </div>
+                </div>
+                <script id="j_idt10_s" type="text/javascript">PrimeFaces.cw("PanelMenu","widget_j_idt10",{id:"j_idt10",widgetVar:"widget_j_idt10"});</script>
+            </div>
+            <div id="content">
+                <div class="white ui-corner-tl">
+                    <h2>My Details</h2>
+                    <form>
+                        <div class="form-row error">
+                            <label class="label" for="input"><span class="required">*</span>Name</label>
+                            <span class="editable-field">Ms Julie Anne Clarkson</span>
+                            <a href="#" class="edit-link"><span class="icon-edit"></span> Edit</a>
+                            <div class="inline-fields">
+                                <input class="input-half-width" type="text" id="input" value="XX">
+                                <div class="message">Please select a security question.</div>
+                                <a class="btn-cancel" href="#">Cancel</a>
+                                <a class="btn-save ui-button btn-grey-light" href="#">Save</a>
+                            </div>
+                        </div>
+                        <div class="form-row error">
+                            <label class="label" for="input"><span class="required">*</span>Preferred Name</label>
+                            <span class="editable-field">Julie</span>
+                            <a href="#" class="edit-link"><span class="icon-edit"></span> Edit</a>
+                            <div class="inline-fields">
+                                <input class="input-half-width" type="text" id="input" value="XX">
+                                <div class="message">Please select a security question.</div>
+                                <a class="btn-cancel" href="#">Cancel</a>
+                                <a class="btn-save ui-button btn-grey-light" href="#">Save</a>
+                            </div>
+                        </div>
+                        <div class="form-row error">
+                            <label class="label" for="input"><span class="required">*</span>Other Names</label>
+                            <span class="editable-field">No</span>
+                            <a href="#" class="edit-link"><span class="icon-edit"></span> Edit</a>
+                            <div class="inline-fields">
+                                <input class="input-half-width" type="text" id="input" value="XX">
+                                <div class="message">Please select a security question.</div>
+                                <a class="btn-cancel" href="#">Cancel</a>
+                                <a class="btn-save ui-button btn-grey-light" href="#">Save</a>
+                            </div>
+                        </div>
+                        <div class="form-row error">
+                            <label class="label" for="select"><span class="required">*</span>Select</label>
+                            <span class="editable-field">Yes</span>
+                            <a href="#" class="edit-link"><span class="icon-edit"></span> Edit</a>
+                            <div class="inline-fields">
+                                <select class="select-half-width" id="select">
+                                    <option>Yes</option>
+                                    <option>No</option>
+                                </select>
+                                <div class="message">
+                                    This error message div is optional, only required if there is a message to be displayed.
+                                </div>
+                                <a class="btn-cancel" href="#">Cancel</a>
+                                <a class="btn-save ui-button btn-grey-light" href="#">Save</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="white ui-corner-tl">
+                    <h2>Login Details</h2>
+                    <form>
+                        <div class="form-row error">
+                            <label class="label" for="input"><span class="required">*</span>Email</label>
+                            <span class="editable-field">julie@julieclarkson.com</span>
+                            <a href="#" class="edit-link"><span class="icon-edit"></span> Edit</a>
+                            <div class="inline-fields">
+                                <input class="input-half-width" type="text" id="input" value="XX">
+                                <div class="message">Please select a security question.</div>
+                                <a class="btn-cancel" href="#">Cancel</a>
+                                <a class="btn-save ui-button btn-grey-light" href="#">Save</a>
+                            </div>
+                        </div>
+                        <div class="form-row error">
+                            <label class="label" for="input"><span class="required">*</span>Password</label>
+                            <span class="editable-field">**********</span>
+                            <a href="#" class="edit-link"><span class="icon-edit"></span> Edit</a>
+                            <div class="inline-fields">
+                                <input class="input-half-width" type="password" id="input" value="XX">
+                                <div class="message">Please select a security question.</div>
+                                <a class="btn-cancel" href="#">Cancel</a>
+                                <a class="btn-save ui-button btn-grey-light" href="#">Save</a>
+                            </div>
+                        </div>
+                        <div class="form-row error">
+                            <label class="label" for="input"><span class="required">*</span>Security Question 1</label>
+                            <span class="editable-field">What's your mother's maiden name?</span>
+                            <a href="#" class="edit-link"><span class="icon-edit"></span> Edit</a>
+                            <div class="inline-fields">
+                                <input class="input-half-width" type="text" id="input" value="XX">
+                                <div class="message">Please select a security question.</div>
+                                <a class="btn-cancel" href="#">Cancel</a>
+                                <a class="btn-save ui-button btn-grey-light" href="#">Save</a>
+                            </div>
+                        </div>
+                        <div class="form-row error">
+                            <label class="label" for="input"><span class="required">*</span>Security Answer 1</label>
+                            <span class="editable-field">*********</span>
+                            <a href="#" class="edit-link"><span class="icon-edit"></span> Edit</a>
+                            <div class="inline-fields">
+                                <input class="input-half-width" type="text" id="input" value="XX">
+                                <div class="message">Please select a security question.</div>
+                                <a class="btn-cancel" href="#">Cancel</a>
+                                <a class="btn-save ui-button btn-grey-light" href="#">Save</a>
+                            </div>
+                        </div>
+                        <div class="form-row error">
+                            <label class="label" for="input"><span class="required">*</span>Security Question 2</label>
+                            <span class="editable-field">What city were you born in?</span>
+                            <a href="#" class="edit-link"><span class="icon-edit"></span> Edit</a>
+                            <div class="inline-fields">
+                                <input class="input-half-width" type="text" id="input" value="XX">
+                                <div class="message">Please select a security question.</div>
+                                <a class="btn-cancel" href="#">Cancel</a>
+                                <a class="btn-save ui-button btn-grey-light" href="#">Save</a>
+                            </div>
+                        </div>
+                        <div class="form-row error">
+                            <label class="label" for="input"><span class="required">*</span>Security Answer 2</label>
+                            <span class="editable-field">*********</span>
+                            <a href="#" class="edit-link"><span class="icon-edit"></span> Edit</a>
+                            <div class="inline-fields">
+                                <input class="input-half-width" type="text" id="input" value="XX">
+                                <div class="message">Please select a security question.</div>
+                                <a class="btn-cancel" href="#">Cancel</a>
+                                <a class="btn-save ui-button btn-grey-light" href="#">Save</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="white ui-corner-tl">
+                    <h2>Address</h2>
+                    <form>
+                        <div class="form-row error">
+                            <label class="label" for="input"><span class="required">*</span>Residential Address</label>
+                            <span class="editable-field">25 Jones Street, Brisbane QLD 4000</span>
+                            <a href="#" class="edit-link"><span class="icon-edit"></span> Edit</a>
+                            <div class="inline-fields">
+                                <input class="input-half-width" type="text" id="input" value="XX">
+                                <div class="message">Please select a security question.</div>
+                                <a class="btn-cancel" href="#">Cancel</a>
+                                <a class="btn-save ui-button btn-grey-light" href="#">Save</a>
+                            </div>
+                        </div>
+                        <div class="form-row error">
+                            <span class="label two-line"><span class="required">*</span>Permanent Residential Address</span>
+                            <span class="editable-field">Yes</span>
+                            <a href="#" class="edit-link"><span class="icon-edit"></span> Edit</a>
+                            <div class="inline-fields">
+                                <div class="radio-group">
+                                    <input type="radio" name="group1" id="radio1" value="Radio_Unchecked"> <label for="radio1">Radio Unchecked</label><br>
+                                    <input type="radio" name="group1" id="radio2" value="Radio_Checked" checked=""> <label for="radio2">Radio Checked</label>
+                                </div>
+                                <div class="message">
+                                    This error message div is optional, only required if there is a message to be displayed.
+                                </div>
+                                <a class="btn-cancel" href="#">Cancel</a>
+                                <a class="btn-save ui-button btn-grey-light" href="#">Save</a>
+                            </div>
+                        </div>
+                        <div class="form-row error">
+                            <span class="label two-line"><span class="required">*</span>Postal Address Same as Residential Address</span>
+                            <span class="editable-field">Yes</span>
+                            <a href="#" class="edit-link"><span class="icon-edit"></span> Edit</a>
+                            <div class="inline-fields">
+                                <div class="radio-group">
+                                    <input type="radio" name="group1" id="radio1" value="Radio_Unchecked"> <label for="radio1">Radio Unchecked</label><br>
+                                    <input type="radio" name="group1" id="radio2" value="Radio_Checked" checked=""> <label for="radio2">Radio Checked</label>
+                                </div>
+                                <div class="message">
+                                    This error message div is optional, only required if there is a message to be displayed.
+                                </div>
+                                <a class="btn-cancel" href="#">Cancel</a>
+                                <a class="btn-save ui-button btn-grey-light" href="#">Save</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="white ui-corner-tl">
+                    <h2>Contacts</h2>
+                    <form>
+                        <div class="form-row error">
+                            <label class="label" for="input"><span class="required">*</span>Mobile Phone Number</label>
+                            <span class="editable-field">0412 123 456</span>
+                            <a href="#" class="edit-link"><span class="icon-edit"></span> Edit</a>
+                            <div class="inline-fields">
+                                <input class="input-half-width" type="text" id="input" value="XX">
+                                <div class="message">Please select a security question.</div>
+                                <a class="btn-cancel" href="#">Cancel</a>
+                                <a class="btn-save ui-button btn-grey-light" href="#">Save</a>
+                            </div>
+                        </div>
+                        <div class="form-row error">
+                            <label class="label" for="input"><span class="required">*</span>Other Contact Number</label>
+                            <span class="editable-field">07 3214 1234</span>
+                            <a href="#" class="edit-link"><span class="icon-edit"></span> Edit</a>
+                            <div class="inline-fields">
+                                <input class="input-half-width" type="text" id="input" value="XX">
+                                <div class="message">Please select a security question.</div>
+                                <a class="btn-cancel" href="#">Cancel</a>
+                                <a class="btn-save ui-button btn-grey-light" href="#">Save</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="right-sidebar">
+                <div class="medium-grey ui-corner-tl">
+                    <h2 class="orange-text">Help</h2>
+                    <ul class="faq-list">
+                        <li>
+                            <strong>What happens if I do not pay my fees?</strong><br/>
+                            Your application will not be processed until payment is received.
+                        </li>
+                        <li>
+                            <strong>What happens if I do not provide my documents?</strong><br/>
+                            Your application will not be processed until documents are received.
+                        </li>
+                        <li>
+                            <strong>What happens if I do not meet the minimum entry requirements for my course preference?</strong><br/>
+                            You are not eligible for a place in that course. You need to meet the requirements or change your preferences.
+                        </li>
+                        <li>
+                            <strong>What does it mean when it says there have been no offers made?</strong><br/>
+                            If there have been no offers, that course has not yet had an offer round. Check the course offer dates.</li>
+                        </li>
+                    </ul>
+                    <a class="ui-button btn-grey-light" href="#"><span class="icon-arrow-right-dark"></span>More Help</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="container">
+            <ul>
+                <li><a href="#">Copyright</a></li>
+                <li><a href="#">Disclaimer</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Any other footer links</a></li>
+            </ul>
         </div>
     </div>
 </body>

@@ -2,13 +2,18 @@
  * JS file for CAOS. Custom Javascript code goes here.
  */
 $(function() {
+    var window_width = $(window).width();
     $("#toggle-menu").click(function(){
+        var toggle_menu = $(this);
+        if (toggle_menu.hasClass('active')){
+            toggle_menu.removeClass('active');
+        } else {
+            toggle_menu.addClass('active');
+        }
+        $('#menu').css('left', $('#menu').css('left') >= '10000px' ? window_width : $('#menu').css('left'));
         $('#menu').stop().show().animate({
-            left: $('#menu').css('left') == "-230px" ? "0" : "-230px"
-        }, 500);
-        $('#wrap').stop().animate({
-            left: $('#wrap').css('left') == "0px" ? "230px" : "0"
-        }, 500);
+            left: $('#menu').css('left') >= "10000px" ? "0" : window_width+"px"
+        }, 500, function() { if ($('#menu').css('left') > 0) $('#menu').css('left', "10000px"); });
         $('body').toggleClass('hide-body');
         return false;
     });
