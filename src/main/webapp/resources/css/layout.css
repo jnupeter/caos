@@ -51,6 +51,8 @@
   margin-right: auto;
   overflow: visible;
   width: 960px;
+  *position: relative;
+  *zoom: 1;
 }
 .container:before, .container:after {
   content: "";
@@ -116,13 +118,13 @@
 }
 
 #header {
-  background: #FFFFFF;
+  background: white;
   width: 100%;
   position: relative;
 }
 #header #logo {
   float: left;
-  margin: 17px 0 0 20px;
+  margin: 17px 0 0 10px;
 }
 #header #logo a img {
   border: 0;
@@ -165,7 +167,7 @@
 }
 #header #top-right #user-functions .ui-state-hover {
   box-shadow: none;
-  background: #E3E3E3;
+  background: #e3e3e3;
 }
 
 @media only screen and (max-width: 959px), only screen and (min-device-width: 768px) and (max-device-width: 959px) {
@@ -223,9 +225,21 @@
   #header .container {
     height: 65px;
   }
+  #header > .container {
+    position: fixed;
+    z-index: 9999;
+    background-color: #FFF;
+  }
+  #header .header-left {
+    -webkit-box-shadow: #333333 0 0 8px;
+    -moz-box-shadow: #333333 0 0 8px;
+    box-shadow: #333333 0 0 8px;
+    height: 65px;
+  }
   #header #top-right {
     width: 100%;
     height: 25px;
+    background-color: #FFF;
   }
   #header #top-right #user-functions #welcome-message,
   #header #top-right #user-functions p {
@@ -241,6 +255,9 @@
   }
   #header #logo .landscape {
     display: block;
+  }
+  #header #banner {
+    margin-top: 65px;
   }
   #header #banner .dots {
     min-height: 80px;
@@ -273,7 +290,7 @@
 }
 #footer ul li a {
   font-size: 10px;
-  color: #FFFFFF;
+  color: white;
   margin-right: 10px;
   display: block;
   float: left;
@@ -293,79 +310,79 @@
   .header-left,
   #top-right {
     float: left;
-    width: 700px;
+    width: 748px;
     margin-left: 0px;
-    margin-right: -720px;
+    margin-right: -768px;
   }
 
   .banner-left {
     float: left;
-    width: 460px;
+    width: 492px;
     margin-left: 0px;
-    margin-right: -480px;
+    margin-right: -512px;
   }
 
   .application-status.portrait {
     float: left;
-    width: 220px;
+    width: 236px;
     margin-left: 0px;
-    margin-right: -240px;
+    margin-right: -256px;
   }
 
   #messages {
     float: left;
-    width: 220px;
-    margin-left: 240px;
-    margin-right: -480px;
+    width: 236px;
+    margin-left: 256px;
+    margin-right: -512px;
   }
 
   #key-dates {
     float: left;
-    width: 220px;
-    margin-left: 480px;
-    margin-right: -720px;
+    width: 236px;
+    margin-left: 512px;
+    margin-right: -768px;
   }
 
   #left-sidebar {
     clear: left;
     float: left;
-    width: 700px;
+    width: 748px;
     margin-left: 0px;
-    margin-right: -720px;
+    margin-right: -768px;
   }
 
   #content {
     clear: left;
     float: left;
-    width: 460px;
+    width: 492px;
     margin-left: 0px;
-    margin-right: -480px;
+    margin-right: -512px;
   }
   #content .col-1 {
     float: left;
-    width: 220px;
+    width: 236px;
     margin-left: 0px;
-    margin-right: -240px;
+    margin-right: -256px;
   }
   #content .col-2 {
     float: left;
-    width: 220px;
-    margin-left: 240px;
-    margin-right: -480px;
+    width: 236px;
+    margin-left: 256px;
+    margin-right: -512px;
   }
 
   #right-sidebar {
     float: left;
-    width: 220px;
-    margin-left: 480px;
-    margin-right: -720px;
+    width: 236px;
+    margin-left: 512px;
+    margin-right: -768px;
   }
 
   #content-bottom {
     float: left;
-    width: 700px;
+    width: 748px;
     margin-left: 0px;
-    margin-right: -720px;
+    margin-right: -768px;
   }
 }
 @media only screen and (max-width: 767px), only screen and (min-device-width: 650px) and (max-device-width: 767px) {
@@ -385,9 +402,9 @@
   #content-bottom {
     clear: left;
     float: left;
-    width: 220px;
+    width: 748px;
     margin-left: 0px;
-    margin-right: -240px;
+    margin-right: -768px;
     width: 100%;
   }
 
@@ -431,7 +448,7 @@ h1 {
 h2 {
   font-size: 26px;
   line-height: 29px;
-  color: #FFFFFF;
+  color: white;
   font-weight: normal;
   margin: 0 0 10px 0;
   text-shadow: 0 2px rgba(0, 0, 0, 0.3);
@@ -453,7 +470,7 @@ h2 {
 }
 
 .red-text {
-  color: #DF0019;
+  color: #df0019;
 }
 
 .orange-text {
@@ -475,10 +492,10 @@ h2 {
   font-size: 14px;
 }
 .dates-list li a {
-  color: #FFFFFF;
+  color: white;
 }
 .dates-list.dark-lines li {
-  border-bottom: 1px solid #E3E3E3;
+  border-bottom: 1px solid #e3e3e3;
   padding: 10px 0;
 }
 
@@ -532,6 +549,389 @@ h2 {
     display: none;
   }
 }
+form button,
+form input[type="button"],
+form input[type="submit"] {
+  height: 32px;
+}
+form .form-row input[type="text"],
+form .form-row input[type="password"],
+form .form-row input[type="email"],
+form .form-row input[type="tel"],
+form .form-row input[type="url"],
+form .form-row input[type="date"],
+form .form-row textarea,
+form .form-row select {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.15);
+  border: 3px solid #e3e3e3;
+  padding: 7px;
+  display: block;
+  font-size: 13px;
+  line-height: 18px;
+  height: 18px;
+  outline: medium none;
+  overflow: hidden;
+  text-indent: 3px;
+  float: left;
+  margin-right: 10px;
+  box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+}
+form .form-row input[type="text"]:focus,
+form .form-row input[type="password"]:focus,
+form .form-row input[type="email"]:focus,
+form .form-row input[type="tel"]:focus,
+form .form-row input[type="url"]:focus,
+form .form-row input[type="date"]:focus,
+form .form-row select:focus,
+form .form-row textarea:focus {
+  border: 3px solid #333333;
+}
+form .form-row textarea {
+  overflow: visible;
+  min-height: 60px;
+}
+form .form-row select {
+  -webkit-appearance: button;
+  line-height: 18px;
+  height: 18px;
+  padding-right: 40px;
+  cursor: pointer;
+  box-sizing: content-box;
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+}
+form .form-row select::-ms-expand {
+  display: none !important;
+}
+form .form-row input[type="checkbox"],
+form .form-row input[type="radio"] {
+  display: none;
+}
+form .form-row input[type="checkbox"] + label,
+form .form-row input[type="radio"] + label {
+  display: inline-block;
+  height: 21px;
+  background: url('../images/sprite-forms.png') no-repeat;
+  cursor: pointer;
+  line-height: 24px;
+  text-indent: 30px;
+}
+form .form-row input[type="checkbox"] + label {
+  background-position: -2px -101px;
+}
+form .form-row input[type="radio"] + label {
+  background-position: -2px -2px;
+}
+form .form-row input[type="checkbox"]:checked + label {
+  background-position: -2px -150px;
+}
+form .form-row input[type="radio"]:checked + label {
+  background-position: -2px -51px;
+}
+form .form-row.error input[type="checkbox"] + label {
+  background-position: -2px -126px;
+}
+form .form-row.error input[type="checkbox"]:checked + label {
+  background-position: -2px -175px;
+}
+form .form-row.error input[type="radio"] + label {
+  background-position: -2px -27px;
+}
+form .form-row.error input[type="radio"]:checked + label {
+  background-position: -2px -76px;
+}
+
+.text-row,
+.form-row {
+  clear: both;
+  padding: 5px 0;
+  overflow: hidden;
+  border-bottom: 1px solid #dedede;
+}
+.text-row .btn-help,
+.form-row .btn-help {
+  margin: 10px 0 0 0;
+}
+.text-row .label,
+.form-row .label {
+  min-height: 7px;
+  width: 270px;
+  text-align: right;
+  display: block;
+  float: left;
+  line-height: 24px;
+  margin: 7px 7px 7px 0;
+}
+.text-row .two-line,
+.form-row .two-line {
+  margin: 0 7px 0 0;
+  line-height: 20px;
+}
+.text-row .checkbox-label,
+.form-row .checkbox-label {
+  float: left;
+}
+.text-row .input-full-width,
+.form-row .input-full-width {
+  width: 333px;
+}
+.text-row .input-full-width.datepicker,
+.form-row .input-full-width.datepicker {
+  background-position: 318px -512px;
+}
+.text-row .input-half-width,
+.form-row .input-half-width {
+  width: 165px;
+}
+.text-row .input-third-width,
+.form-row .input-third-width {
+  width: 90px;
+}
+.text-row .select-full-width,
+.form-row .select-full-width {
+  display: block;
+  float: left;
+}
+.text-row .select-half-width,
+.form-row .select-half-width {
+  display: block;
+  float: left;
+  width: 132px;
+  background: url('../images/sprite-forms.png') no-repeat 144px -198px;
+}
+.text-row .select-half-width:hover,
+.form-row .select-half-width:hover {
+  background: url('../images/sprite-forms.png') no-repeat 144px -232px;
+}
+.text-row .select-third-width,
+.form-row .select-third-width {
+  display: block;
+  float: left;
+}
+.text-row .select-day,
+.form-row .select-day {
+  width: 30px;
+  background: url('../images/sprite-forms.png') no-repeat 42px -198px;
+}
+.text-row .select-day:hover,
+.form-row .select-day:hover {
+  background: url('../images/sprite-forms.png') no-repeat 42px -232px;
+}
+.text-row .select-month,
+.form-row .select-month {
+  width: 84px;
+  background: url('../images/sprite-forms.png') no-repeat 96px -198px;
+}
+.text-row .select-month:hover,
+.form-row .select-month:hover {
+  background: url('../images/sprite-forms.png') no-repeat 96px -232px;
+}
+.text-row .select-year,
+.form-row .select-year {
+  width: 60px;
+  background: url('../images/sprite-forms.png') no-repeat 72px -198px;
+}
+.text-row .select-year:hover,
+.form-row .select-year:hover {
+  background: url('../images/sprite-forms.png') no-repeat 72px -232px;
+}
+.text-row .text,
+.form-row .text {
+  float: left;
+  margin: 7px 7px 7px 0;
+  line-height: 24px;
+}
+.text-row div.radio-group,
+.form-row div.radio-group {
+  float: left;
+}
+.text-row div.message,
+.form-row div.message {
+  font-size: 11px;
+  width: 255px;
+  color: #565658;
+  line-height: 13px;
+  float: right;
+}
+.text-row.terms-and-conditions,
+.form-row.terms-and-conditions {
+  background: none;
+  padding: 10px 0;
+}
+.text-row.error .feedback span.message,
+.form-row.error .feedback span.message {
+  color: #df0019;
+}
+.text-row.error input[type="text"],
+.text-row.error input[type="password"],
+.text-row.error input[type="email"],
+.text-row.error input[type="tel"],
+.text-row.error input[type="url"],
+.text-row.error input[type="date"],
+.text-row.error textarea,
+.text-row.error select,
+.form-row.error input[type="text"],
+.form-row.error input[type="password"],
+.form-row.error input[type="email"],
+.form-row.error input[type="tel"],
+.form-row.error input[type="url"],
+.form-row.error input[type="date"],
+.form-row.error textarea,
+.form-row.error select {
+  border: 3px solid #f25f72;
+}
+.text-row.text-only-center, .text-row.text-only-left, .text-row.text-only-right,
+.form-row.text-only-center,
+.form-row.text-only-left,
+.form-row.text-only-right {
+  background: none;
+  background-color: #efefef;
+  min-height: 0;
+  padding: 10px;
+}
+.text-row.text-only-center p, .text-row.text-only-left p, .text-row.text-only-right p,
+.form-row.text-only-center p,
+.form-row.text-only-left p,
+.form-row.text-only-right p {
+  margin: 10px 0;
+}
+.text-row.text-only-center,
+.form-row.text-only-center {
+  text-align: center;
+}
+.text-row.text-only-left,
+.form-row.text-only-left {
+  text-align: left;
+}
+.text-row.text-only-right,
+.form-row.text-only-right {
+  text-align: right;
+}
+.text-row img,
+.form-row img {
+  display: block;
+  float: left;
+  top: 5px;
+  position: relative;
+}
+
+.text-row {
+  background: none;
+}
+.text-row .label {
+  font-weight: bold;
+}
+
+.required {
+  color: #df0019;
+  margin-right: 3px;
+}
+
+#content form .left {
+  width: 100%;
+}
+#content form label,
+#content form .label {
+  width: 150px;
+}
+#content form .message {
+  width: 272px;
+}
+#content .edit-link {
+  float: right;
+  line-height: 24px;
+  margin: 7px 0 7px 0;
+  display: block;
+  width: 40px;
+  color: #df0019;
+}
+#content .editable-field {
+  line-height: 24px;
+  margin: 7px 7px 7px 0;
+  float: left;
+  display: block;
+}
+#content .inline-fields {
+  margin: 5px 0 0 157px;
+}
+#content .inline-fields a.btn-save {
+  float: left;
+  width: auto;
+  margin: 5px 0 0 10px;
+}
+#content .inline-fields a.btn-save .ui-button-text {
+  padding: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+#content .inline-fields a.btn-cancel {
+  margin: 8px 0;
+  float: left;
+  color: #333333;
+  clear: left;
+}
+
+@media only screen and (max-width: 959px), only screen and (min-device-width: 768px) and (max-device-width: 959px) {
+  .form-row,
+  .text-row {
+    background: none !important;
+  }
+  .form-row.text-only-center, .form-row.text-only-left,
+  .text-row.text-only-center,
+  .text-row.text-only-left {
+    background: #efefef !important;
+  }
+  .form-row .left,
+  .text-row .left {
+    float: none !important;
+  }
+  .form-row div.message,
+  .text-row div.message {
+    width: auto !important;
+    clear: both;
+    float: left;
+    margin: 5px 0 0 0;
+  }
+  .form-row.error div.message,
+  .text-row.error div.message {
+    color: #df0019;
+  }
+
+  .buttons {
+    width: 100% !important;
+  }
+
+  #content form .label {
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding-left: 10px;
+  }
+  #content form .label .required {
+    margin: 0 0 0 -10px;
+  }
+  #content .edit-link {
+    margin-top: 0;
+  }
+  #content .editable-field {
+    margin: 0 0 0 5px;
+  }
+  #content .inline-fields {
+    margin-left: 5px;
+  }
+}
 .countdown.portrait .countdown-text {
   text-shadow: 0 2px rgba(0, 0, 0, 0.3);
 }
@@ -569,12 +969,12 @@ h2 {
   margin-right: 20px;
 }
 .countdown.landscape .number {
-  color: #DF0019;
+  color: #df0019;
   font-size: 40px;
   line-height: 40px;
-  -moz-box-shadow: #999 0 0 4px;
-  -webkit-box-shadow: #999 0 0 4px;
-  box-shadow: #999 0 0 4px;
+  -webkit-box-shadow: #999999 0 0 4px;
+  -moz-box-shadow: #999999 0 0 4px;
+  box-shadow: #999999 0 0 4px;
   background-color: #FFF;
   display: block;
   float: left;
@@ -619,8 +1019,10 @@ h2 {
   }
 }
 .application-status .status {
-  -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.75);
   padding: 5px;
@@ -642,7 +1044,7 @@ h2 {
   padding: 4px;
 }
 .application-status.portrait li {
-  border-top: 1px solid #FFFFFF;
+  border-top: 1px solid white;
 }
 .application-status.landscape h2 {
   text-shadow: none;
@@ -670,8 +1072,10 @@ h2 {
   height: 30px;
   line-height: 30px;
   padding: 0 16px;
+  -webkit-border-radius: 25px 0 0 0;
   -moz-border-radius: 25px 0 0 0;
-  -webkit-border-radius: 25px;
+  -ms-border-radius: 25px 0 0 0;
+  -o-border-radius: 25px 0 0 0;
   border-radius: 25px 0 0 0;
 }
 .messages .date {
@@ -703,7 +1107,7 @@ h2 {
   line-height: 30px;
   text-align: right;
   padding: 0 16px;
-  color: #FFFFFF;
+  color: white;
   font-size: 14px;
   display: block;
 }
@@ -727,7 +1131,7 @@ h2 {
   background: url("../images/banner.jpg") no-repeat center top;
   background-size: 100%;
   min-width: 960px;
-  color: #FFFFFF;
+  color: white;
   margin-top: 130px;
 }
 #banner .dots {
@@ -753,14 +1157,14 @@ h2 {
 
 #key-dates .ui-corner-tl {
   padding: 20px 15px 13px 15px;
-  color: #FFFFFF;
+  color: white;
   background-color: rgba(0, 0, 0, 0.5);
   overflow: hidden;
   height: 250px;
   padding-bottom: 20px;
 }
 #key-dates .ui-corner-tl h2 {
-  color: #FFFFFF;
+  color: white;
 }
 #key-dates .ui-corner-tl .dates-container {
   height: 200px;
@@ -790,7 +1194,7 @@ h2 {
 @media only screen and (max-width: 767px), only screen and (min-device-width: 650px) and (max-device-width: 767px) {
   #banner {
     margin-top: 0;
-    background: #DF0019;
+    background: #df0019;
     min-width: 100%;
     overflow: hidden;
   }
@@ -821,7 +1225,7 @@ h2 {
 }
 #header > .container::after {
   content: ' ';
-  background: #FFFFFF url("../images/header-bg.jpg") repeat-x right top;
+  background: white url("../images/header-bg.jpg") repeat-x right top;
   position: absolute;
   width: 100%;
   height: 130px;
@@ -829,17 +1233,33 @@ h2 {
 }
 
 #toggle-menu {
-  float: left;
   display: none;
-  font-size: 22px;
-  line-height: 20px;
-  text-transform: uppercase;
+  position: absolute;
+  right: 0px;
+  padding: 0;
+  margin: 5px 10px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #df0019;
 }
-#toggle-menu a {
+#toggle-menu .icon-bar {
+  display: block;
+  width: 100%;
+  height: 6px;
+  border-radius: 4px;
+  background-color: #df0019;
+  margin-top: 2px;
+}
+#toggle-menu.active {
   color: #333333;
 }
-#toggle-menu span {
-  margin-right: 5px;
+#toggle-menu.active .icon-bar {
+  background-color: #333333;
 }
 
 #menu {
@@ -894,29 +1314,38 @@ h2 {
 @media only screen and (max-width: 767px), only screen and (min-device-width: 650px) and (max-device-width: 767px) {
   #toggle-menu {
     display: block;
-    margin: 20px 0 0 10px;
   }
 
   #menu {
     position: fixed;
     margin: 0;
-    padding: 10px;
-    top: 0;
-    left: -230px;
-    background-color: #900015;
-    overflow: auto;
-    -moz-box-shadow: #333 0 0 8px;
-    -webkit-box-shadow: #333 0 0 8px;
-    box-shadow: #333 0 0 8px;
-    width: 210px;
+    padding: 0;
+    margin-top: 65px;
+    left: 10000px;
+    background-color: #333333;
+    width: 100%;
     height: 100%;
     z-index: 1000;
+  }
+  #menu:before {
+    content: ' ';
+    position: absolute;
+    margin-top: -10px;
+    right: 17px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #333333;
   }
   #menu li {
     float: none;
     line-height: 25px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
-    padding: 7px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 10px 0;
+    margin: 0 10px;
+    font-size: 14px;
+    font-weight: normal;
   }
   #menu li a {
     padding: 0;
@@ -927,10 +1356,10 @@ h2 {
   }
   #menu li a:hover {
     text-decoration: underline;
-    color: #FFFFFF;
+    color: white;
   }
   #menu li.current a {
-    color: #FFFFFF;
+    color: white;
   }
   #menu li.current::after {
     content: none;
@@ -939,12 +1368,13 @@ h2 {
     padding: 0;
   }
   #menu.five li.last {
-    margin: 0;
+    margin: 0 10px;
     max-width: 100%;
   }
 }
 @media only screen and (max-width: 649px), only screen and (max-device-width: 649px) {
   .hide-body {
+    width: 100%;
     position: fixed;
   }
 }
@@ -956,13 +1386,15 @@ h2 {
 }
 
 .icon-user {
-  background: #555 url('../images/sprite.png') no-repeat 5px -67px;
+  background: #555555 url('../images/sprite.png') no-repeat 5px -67px;
   width: 17px;
   height: 17px;
   float: left;
   margin-right: 5px;
-  -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
   border-radius: 50%;
 }
 
@@ -971,18 +1403,20 @@ h2 {
   height: 23px;
   float: left;
   margin-right: 5px;
-  -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
   border-radius: 50%;
-  border: 2px solid #FFFFFF;
-  -moz-box-shadow: #666 0 0 4px;
-  -webkit-box-shadow: #666 0 0 4px;
-  box-shadow: #666 0 0 4px;
-  background-color: #DF0019;
+  border: 2px solid white;
+  -webkit-box-shadow: #666666 0 0 4px;
+  -moz-box-shadow: #666666 0 0 4px;
+  box-shadow: #666666 0 0 4px;
+  background-color: #df0019;
   text-align: center;
   font-size: 16px;
   line-height: 23px;
-  color: #FFFFFF;
+  color: white;
 }
 
 .icon-on-hold {
@@ -990,14 +1424,16 @@ h2 {
   height: 23px;
   float: left;
   margin-right: 5px;
-  -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
   border-radius: 50%;
-  border: 2px solid #FFFFFF;
-  -moz-box-shadow: #666 0 0 4px;
-  -webkit-box-shadow: #666 0 0 4px;
-  box-shadow: #666 0 0 4px;
-  background: #FF8000 url('../images/sprite.png') no-repeat 6px -87px;
+  border: 2px solid white;
+  -webkit-box-shadow: #666666 0 0 4px;
+  -moz-box-shadow: #666666 0 0 4px;
+  box-shadow: #666666 0 0 4px;
+  background: #ff8000 url('../images/sprite.png') no-repeat 6px -87px;
 }
 
 .icon-in-progress {
@@ -1005,14 +1441,16 @@ h2 {
   height: 23px;
   float: left;
   margin-right: 5px;
-  -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
   border-radius: 50%;
-  border: 2px solid #FFFFFF;
-  -moz-box-shadow: #666 0 0 4px;
-  -webkit-box-shadow: #666 0 0 4px;
-  box-shadow: #666 0 0 4px;
-  background: #00A3D9 url('../images/sprite.png') no-repeat 8px -114px;
+  border: 2px solid white;
+  -webkit-box-shadow: #666666 0 0 4px;
+  -moz-box-shadow: #666666 0 0 4px;
+  box-shadow: #666666 0 0 4px;
+  background: #00a3d9 url('../images/sprite.png') no-repeat 8px -114px;
 }
 
 .icon-withdrawn {
@@ -1020,14 +1458,16 @@ h2 {
   height: 23px;
   float: left;
   margin-right: 5px;
-  -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
   border-radius: 50%;
-  border: 2px solid #FFFFFF;
-  -moz-box-shadow: #666 0 0 4px;
-  -webkit-box-shadow: #666 0 0 4px;
-  box-shadow: #666 0 0 4px;
-  background: #DF0019 url('../images/sprite.png') 7px -139px;
+  border: 2px solid white;
+  -webkit-box-shadow: #666666 0 0 4px;
+  -moz-box-shadow: #666666 0 0 4px;
+  box-shadow: #666666 0 0 4px;
+  background: #df0019 url('../images/sprite.png') 7px -139px;
 }
 
 .icon-offer-received {
@@ -1035,18 +1475,20 @@ h2 {
   height: 23px;
   float: left;
   margin-right: 5px;
-  -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
   border-radius: 50%;
-  border: 2px solid #FFFFFF;
-  -moz-box-shadow: #666 0 0 4px;
-  -webkit-box-shadow: #666 0 0 4px;
-  box-shadow: #666 0 0 4px;
+  border: 2px solid white;
+  -webkit-box-shadow: #666666 0 0 4px;
+  -moz-box-shadow: #666666 0 0 4px;
+  box-shadow: #666666 0 0 4px;
   background: #85B200;
   text-align: center;
   font-size: 16px;
   line-height: 23px;
-  color: #FFFFFF;
+  color: white;
 }
 
 .icon-arrow-right-light {
@@ -1063,4 +1505,13 @@ h2 {
 
 .icon-arrow-up {
   float: left;
+}
+
+.icon-edit {
+  width: 16px;
+  display: block;
+  height: 16px;
+  float: left;
+  margin-right: 3px;
+  background: white url("../images/sprite.png") no-repeat 0px -190px;
 }

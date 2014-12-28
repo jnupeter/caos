@@ -11,6 +11,7 @@ $(function() {
         '   <a href="3-application-statuses.html">3</a> ' +
         '   <a href="4-my-application.html">4</a> ' +
         '   <a href="5-education-and-experience.html">5</a> ' +
+        '   <a href="6-my-details.html">6</a> ' +
         '   <a href="style-guide.html">Style Guide</a> ' +
 //        '   <a href="#" id="toggle-overlay">Toggle Overlay</a> ' +
         '</div>' +
